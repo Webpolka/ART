@@ -1,0 +1,24 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+ROOT
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+:root {	
+	--container-width: 1440px;
+	--container-padding: 15px;
+	--grid-padding-x: var(--container-padding); 
+
+	--font-main: "Montserrat", sans-serif;
+	--font-title: 'Cormorant', sans-serif;
+
+	--scrollbar: red;
+	--scrollbar-track: green;
+	--scrollbar-thumb: blue;
+	
+	--transition: 0.3s ease-in-out;
+	--radius: 2rem;
+
+	--shadow: 0 0 2px 4px rgb(0, 0, 255, 0.35);
+	--shadow-hover: 0 0 5px 0 #{rgba(#000, 10%)},
+	0 0 10px 0 #{rgba(#000, 10%)},
+	0 0 15px 0 #{rgba(#000, 10%)};
+}
