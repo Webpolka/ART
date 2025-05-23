@@ -12,12 +12,13 @@ html {
 
 body {
 	text-wrap: balance;
+	color: var(--color-white);
 }
 
 * {
 	user-select: none;
 	&::-webkit-scrollbar {
-		inline-size: rem(4);
+		inline-size: rem(2);
 		background-color: var(--scrollbar);
 	}
 
@@ -34,12 +35,12 @@ body {
 		cursor: pointer;
 
 		@include any-hover {
-			background-color: grey;
+			background-color: var(--color-hover);
 		}
 	}
 	@include sm {
 		&::-webkit-scrollbar {
-			inline-size: rem(1);
+			inline-size: rem(2);
 		}
 	}
 }
@@ -87,6 +88,24 @@ body {
 	flex: 1 1 auto;
 }
 
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
 .bred {
 	border: 1px solid red;
 }
+
+.gred {
+	border: 1px solid green;
+}
+

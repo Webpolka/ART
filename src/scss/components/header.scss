@@ -24,6 +24,8 @@ HEADER
 
 	// LOGO
 	&-logo {
+		position: relative;
+		z-index: 1;
 		display: block;
 		min-width: 61px;
 		width: 61px;
@@ -50,6 +52,10 @@ HEADER
 			align-items: center;
 			justify-content: flex-end;
 			gap: 115px;
+
+			@include xl{
+				gap: 70px;
+			}
 
 			padding-right: 10px;
 
@@ -95,8 +101,7 @@ HEADER
 			.mobile {
 				--adaptive-margin: 15px;
 
-				transition: all 0.3s ease-in-out;
-				color: var(--color-white);
+				transition: all 0.3s ease-in-out;				
 
 				position: absolute;
 				top: 53px;
@@ -203,6 +208,8 @@ HEADER
 
 		// BURGER BUTTON
 		&_burger {
+			position: relative;
+			z-index: 1;
 			display: none;
 
 			flex-direction: column;
@@ -211,6 +218,10 @@ HEADER
 
 			@include md {
 				display: flex;
+			}
+
+			@media (max-width:440px){
+				margin-right: 15px;
 			}
 
 			span {
