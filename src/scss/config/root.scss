@@ -3,19 +3,20 @@ ROOT
 --------------------------------------------------------------------------------------------------------------------------------*/
 
 :root {	
-	--container-width: 1440px;
-	--container-padding: 15px;
-	--grid-padding-x: var(--container-padding); 
-
 	--font-main: "Montserrat", sans-serif;
-	--font-title: 'Cormorant', sans-serif;
+	--font-title: 'Cormorant', sans-serif;	
 
-	--scrollbar: red;
-	--scrollbar-track: green;
-	--scrollbar-thumb: blue;
+
+	--color-white: #fff;
+	--color-bg: #040302;
+	--color-hover: #BE9C4B;
+
+	--scrollbar: transparent;
+	--scrollbar-track: rgb(0,0,0,0.25);
+	--scrollbar-thumb: rgb(190, 156, 75,0.25);
 	
 	--transition: 0.3s ease-in-out;
-	--radius: 2rem;
+	--radius: 0;
 
 	--shadow: 0 0 2px 4px rgb(0, 0, 255, 0.35);
 	--shadow-hover: 0 0 5px 0 #{rgba(#000, 10%)},

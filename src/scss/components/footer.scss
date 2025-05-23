@@ -1,0 +1,122 @@
+/* -------------------------------------------------------------------------------------------------------------------------------------
+FOOTER
+---------------------------------------------------------------------------------------------------------------------------------------*/
+.footer {
+	max-inline-size: 1440px;
+	width: 100%;
+	margin-inline: auto;	
+	min-height: 269px;
+
+	background-image: url("../../images/footer.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	padding-top: 48px;
+	padding-bottom: 80px;
+	@include xl {
+		background-position: 50% 0;
+	
+	}
+
+	@include sm {
+		padding-top: 65px;
+		background-image: url("../../images/footer-mobile.png");
+	}	
+
+
+	// LOGO
+	&-logo {
+		position: relative;	
+		display: inline-flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 25px;
+		top:-15px;
+		left: -10px;
+
+		@include xl{
+			left: 0px;
+		}
+		@include md{
+			margin-bottom: 15px;
+		}
+		@include sm{
+			left: -25px;			
+		}
+		
+		&_img {
+			display: block;
+			width: 109px;
+			height: 109px;
+			@include xl {
+				width: 81px;
+				height: 81px;
+			}
+			@include sm {
+				width: 112px;
+				height: 112px;
+			}
+		}
+
+		&_text {
+			position: relative;
+			display: block;
+			font-family: var(--font-title);
+			font-weight: 700;
+			font-size: 36px;
+			line-height: 98%;
+			color: var(--color-white);
+
+			@include xl {
+				font-size: 32px;
+				left: -25px;
+			}		
+			
+			@include sm{
+				font-size: 36px;
+				top: -5px;				
+			}			
+		}
+	}
+
+
+	// LIST
+	@include md{
+		ul.adaptive-left-50{
+			padding-left: 50%;
+		}
+	}
+
+
+	ul {		
+		li a {
+			font-family: var(--font-main);
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 133%;
+			color: var(--color-white);
+		}
+		li:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	// COPYRIGHT
+	&-copyright {
+		p {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 100%;
+			line-height: 133%;
+			text-transform: uppercase;
+			color: var(--color-white);
+
+			text-align: center;
+
+			margin-top: 77px;			
+		}
+		@include sm {
+			margin-top: 90px;
+		}
+	}
+}

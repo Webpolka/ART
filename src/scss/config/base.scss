@@ -15,8 +15,9 @@ body {
 }
 
 * {
+	user-select: none;
 	&::-webkit-scrollbar {
-		inline-size: rem(10);
+		inline-size: rem(4);
 		background-color: var(--scrollbar);
 	}
 
@@ -36,16 +37,17 @@ body {
 			background-color: grey;
 		}
 	}
+	@include sm {
+		&::-webkit-scrollbar {
+			inline-size: rem(1);
+		}
+	}
 }
-.container {
-	margin-inline: auto;
-	max-inline-size: var(--container-width);
-	padding-inline: var(--container-padding);
+
+.no-scroll {
+	overflow: hidden;
 }
-.container-full {
-	padding: 0 var(--container-padding);
-	max-width: 100%;
-}
+
 .img-responsive {
 	width: 100%;
 	height: auto;
@@ -83,4 +85,8 @@ body {
 .page {
 	position: relative;
 	flex: 1 1 auto;
+}
+
+.bred {
+	border: 1px solid red;
 }
