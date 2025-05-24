@@ -485,6 +485,12 @@ PRODUCT CARD
   padding: 20px;
   transform: scale(1);
   transition: transform 0.3s ease-in-out;
+  height: 100%;
+}
+@media (max-width: 576px) {
+  .product-card {
+    padding: 15px;
+  }
 }
 .product-card:hover {
   transform: scale(1.02);
@@ -497,11 +503,16 @@ PRODUCT CARD
   font-weight: 400;
   font-size: 16px;
   line-height: 133%;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 0.87) !important;
 }
 @media (max-width: 1200px) {
   .product-card_title h3 {
     font-size: 14px;
+  }
+}
+@media (max-width: 992px) {
+  .product-card_title h3 {
+    font-size: 12px;
   }
 }
 .product-card_desc p {
@@ -516,6 +527,11 @@ PRODUCT CARD
     font-size: 12px;
   }
 }
+@media (max-width: 992px) {
+  .product-card_desc p {
+    font-size: 10px;
+  }
+}
 .product-card_price span {
   display: block;
   font-family: var(--font-title);
@@ -528,6 +544,11 @@ PRODUCT CARD
 @media (max-width: 1200px) {
   .product-card_price span {
     font-size: 22px;
+  }
+}
+@media (max-width: 992px) {
+  .product-card_price span {
+    font-size: 20px;
   }
 }
 
@@ -1066,6 +1087,11 @@ SECTION ABOUT
     padding-top: 50px;
   }
 }
+@media (max-width: 576px) {
+  .main-about_image {
+    max-width: 162px;
+  }
+}
 .main-about_description {
   padding-top: 64px;
   display: flex;
@@ -1075,7 +1101,13 @@ SECTION ABOUT
 }
 @media (max-width: 1200px) {
   .main-about_description {
-    padding-top: 50px;
+    padding-top: 56px;
+  }
+}
+@media (max-width: 576px) {
+  .main-about_description {
+    padding-top: 42px;
+    padding-left: 27.5%;
   }
 }
 .main-about_description p:not(:last-child) {
@@ -1100,6 +1132,17 @@ SECTION BOUTIQUE
   padding-top: 64px;
   margin-bottom: 32px;
 }
+@media (max-width: 1200px) {
+  .main-boutique_description {
+    padding-top: 56px;
+  }
+}
+@media (max-width: 576px) {
+  .main-boutique_description {
+    padding-top: 42px;
+    padding-left: 27.5%;
+  }
+}
 .main-boutique_products-all {
   text-align: center;
   margin-top: 64px;
@@ -1117,19 +1160,41 @@ SECTION GALLERY
 .main-gallery_head h4 {
   font-weight: 700;
   font-size: 24px;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 @media (max-width: 1200px) {
   .main-gallery_head h4 {
     margin-bottom: 32px;
   }
 }
-.main-gallery_desc p:not(:last-child) {
-  margin-bottom: 16px;
+@media (max-width: 576px) {
+  .main-gallery_head h4 {
+    font-size: 22px;
+  }
+}
+.main-gallery_desc p {
+  line-height: 120%;
+  padding-top: 32px;
+}
+@media (max-width: 576px) {
+  .main-gallery_desc p {
+    padding-top: 24px;
+  }
 }
 .main-gallery_more {
   text-align: center;
   margin-top: 64px;
+}
+.main-gallery .justify-adaptive {
+  justify-content: center;
+}
+@media (max-width: 576px) {
+  .main-gallery .justify-adaptive {
+    justify-content: flex-end;
+  }
+}
+.main-gallery .transform-adaptive {
+  transform: translateX(-32px);
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------

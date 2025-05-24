@@ -56,6 +56,12 @@ PRODUCT CARD
 	transform: scale(1);
 	transition: transform 0.3s ease-in-out;
 
+	height: 100%;
+
+	@include sm{
+		padding: 15px;
+	}
+
 	&:hover {
 		transform: scale(1.02);
 	}
@@ -70,10 +76,14 @@ PRODUCT CARD
 			font-weight: 400;
 			font-size: 16px;
 			line-height: 133%;
-			color: rgba(255, 255, 255, 0.87);
+			color: rgba(255, 255, 255, 0.87) !important;
 
 			@include xl {				
 				font-size: 14px;
+			}
+
+			@include lg{
+				font-size: 12px;
 			}
 		}
 	}
@@ -86,6 +96,10 @@ PRODUCT CARD
 			color: rgba(255, 255, 255, 0.68);
 			@include xl {				
 				font-size: 12px;
+			}
+
+			@include lg{
+				font-size: 10px;
 			}
 
 			padding-top: 3px;
@@ -102,6 +116,9 @@ PRODUCT CARD
 			color: rgba(255, 255, 255, 0.87);
 			@include xl {				
 				font-size: 22px;
+			}
+			@include lg{
+				font-size: 20px;
 			}
 
 			padding-top: 3px;

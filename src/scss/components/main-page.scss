@@ -152,12 +152,19 @@ SECTION ABOUT
 		@include xl {
 			padding-top: 50px;
 		}
+		@include sm {
+			max-width: 162px;
+		}
 	}
 
 	&_description {
 		padding-top: 64px;
 		@include xl {
-			padding-top: 50px;
+			padding-top: 56px;
+		}
+		@include sm {
+			padding-top: 42px;
+			padding-left: 27.5%;
 		}
 
 		display: flex;
@@ -169,6 +176,7 @@ SECTION ABOUT
 			margin-bottom: 16px;
 		}
 	}
+
 	.justify-adaptive {
 		justify-content: center;
 		@include sm {
@@ -186,6 +194,13 @@ SECTION BOUTIQUE
 	&_description {
 		padding-top: 64px;
 		margin-bottom: 32px;
+		@include xl {
+			padding-top: 56px;
+		}
+		@include sm {
+			padding-top: 42px;
+			padding-left: 27.5%;
+		}
 	}
 
 	&_products-all {
@@ -208,15 +223,22 @@ SECTION GALLERY
 		h4 {
 			font-weight: 700;
 			font-size: 24px;
-			margin-bottom: 64px;
+			margin-bottom: 32px;
 			@include xl {
 				margin-bottom: 32px;
+			}
+			@include sm {
+				font-size: 22px;
 			}
 		}
 	}
 	&_desc {
-		p:not(:last-child) {
-			margin-bottom: 16px;
+		p {
+			line-height: 120%;
+			padding-top: 32px;
+			@include sm{
+				padding-top: 24px;
+			}
 		}
 	}
 
@@ -224,6 +246,15 @@ SECTION GALLERY
 		text-align: center;
 		margin-top: 64px;
 	}
+	.justify-adaptive {
+		justify-content: center;
+		@include sm {
+			justify-content: flex-end;
+		}
+	}
+	.transform-adaptive {
+		transform: translateX(-32px);
+	}	
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------
