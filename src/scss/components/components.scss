@@ -6,7 +6,7 @@ body {
 }
 .container {
 	margin-inline: auto;
-	
+
 	@include xxl {
 		max-inline-size: 1440px;
 		padding-inline: 120px;
@@ -14,7 +14,7 @@ body {
 	@include xl {
 		max-inline-size: 1024px;
 		padding-inline: 30px;
-	}	
+	}
 	@include sm {
 		max-inline-size: 440px;
 		padding-inline: 15px;
@@ -48,6 +48,36 @@ BUTTONS
 /*--------------------------------------------------------------------------------------------------------------------------------
 PRODUCT CARD
 --------------------------------------------------------------------------------------------------------------------------------*/
+.products {
+	.gy-pro {
+			--bs-gutter-y: 48px;
+		}
+	@include xl{
+		.gy-pro {
+			--bs-gutter-y: 54px;
+		}
+	}
+	@include sm {
+		.gy-pro {
+			--bs-gutter-y: 40px;
+		}
+	}
+
+	// Products 
+	.gx-pro {
+			--bs-gutter-x: 21px;
+		}
+	@include xl{
+		.gx-pro {
+			--bs-gutter-x: 17px;
+		}
+	}
+	@include sm {
+		.gx-pro {
+			--bs-gutter-x: 16px;
+		}
+	}
+}
 .product-card {
 	display: block;
 	border: 1px solid rgba(255, 255, 255, 0.1);
@@ -55,10 +85,9 @@ PRODUCT CARD
 	padding: 20px;
 	transform: scale(1);
 	transition: transform 0.3s ease-in-out;
-
 	height: 100%;
 
-	@include sm{
+	@include sm {
 		padding: 15px;
 	}
 
@@ -78,11 +107,11 @@ PRODUCT CARD
 			line-height: 133%;
 			color: rgba(255, 255, 255, 0.87) !important;
 
-			@include xl {				
+			@include xl {
 				font-size: 14px;
 			}
 
-			@include lg{
+			@include lg {
 				font-size: 12px;
 			}
 		}
@@ -94,11 +123,11 @@ PRODUCT CARD
 			font-weight: 400;
 			font-size: 14px;
 			color: rgba(255, 255, 255, 0.68);
-			@include xl {				
+			@include xl {
 				font-size: 12px;
 			}
 
-			@include lg{
+			@include lg {
 				font-size: 10px;
 			}
 
@@ -114,10 +143,10 @@ PRODUCT CARD
 			font-size: 24px;
 			line-height: 133%;
 			color: rgba(255, 255, 255, 0.87);
-			@include xl {				
+			@include xl {
 				font-size: 22px;
 			}
-			@include lg{
+			@include lg {
 				font-size: 20px;
 			}
 
@@ -130,12 +159,14 @@ PRODUCT CARD
 ACCORDION
 --------------------------------------------------------------------------------------------------------------------------------*/
 .accordion-btn {
-	width: 30px;
-	height: 30px;
+	width: 15px;
+	height: 15px;
 	position: relative;
 	border: none;
 	background: none;
 	cursor: pointer;
+
+	margin-left: 10px;
 
 	span {
 		position: absolute;
@@ -165,6 +196,9 @@ ACCORDION
 	margin-block: 0;
 	overflow: hidden;
 	transition: all 0.3s linear;
+	p{
+		padding-right: 30px;		
+	}
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------------

@@ -1,7 +1,8 @@
 import { BaseHelpers } from "./helpers/base-helpers";
 import Accordion from "./modules/accordion";
-import TransferElements from './modules/transfer.js';
+import TransferElements from "./modules/transfer.js";
 
+const isEven = (num) => num % 2 === 0;
 window.addEventListener("DOMContentLoaded", function () {
 	/* --------------------------------------------------------------------------------------------------------------------------
 BASE HELPERS
@@ -12,7 +13,7 @@ BASE HELPERS
 	BaseHelpers.addTouchClass();
 
 	/* --------------------------------------------------------------------------------------------------------------------------
-BURGER CODE
+BURGER MENU CODE
 -----------------------------------------------------------------------------------------------------------------------------*/
 	const burgerBtn = document.querySelector("#mobile-burger");
 	const burgerClose = document.querySelector("#mobile-close");
@@ -46,65 +47,46 @@ ACCORDION
 		button: ".accordion-btn",
 		panel: ".accordion-panel",
 		activeClass: "active",
-	}).listener();
+	}).listener();	
 
 	/* --------------------------------------------------------------------------------------------------------------------------
-MAIN BOUTIQUE - MORE REMOVER
+MAIN TRANSFER BLOCKS
 -----------------------------------------------------------------------------------------------------------------------------*/
-	const mainBoutique = document.querySelector("#main-boutique");
-	if (mainBoutique) {
-		const allProducts = mainBoutique.querySelectorAll(".product-card");
+	const transferContainer = document.getElementById("main-transfer-cont");
+	const transferDescription = document.getElementById("main-transfer-desc");
+
+	if (transferContainer && transferDescription) {
+		new TransferElements({
+			sourceElement: transferDescription,
+			breakpoints: {
+				768: {
+					targetElement: transferContainer,
+					targetPosition: 0,
+				},
+			},
+		});
+	}
+
+	/* --------------------------------------------------------------------------------------------------------------------------
+SHOP PRODUCTS - ADAPTIVE TO 767px SHOW PAIR 
+-----------------------------------------------------------------------------------------------------------------------------*/
+	const shopProducts = document.querySelector(".products");
+	if (shopProducts) {
+		const allProducts = shopProducts.querySelectorAll(".product-card");
 		const mediaSM = window.matchMedia("(max-width: 765px)");
 
 		window.addEventListener("resize", remove);
 		function remove() {
 			if (mediaSM.matches) {
-				allProducts.forEach((prod, idx) => {
-					idx > 1 ? (prod.style.display = "none") : "";
-				});
-				return;
+				if (!isEven(allProducts.length)) {
+					allProducts[allProducts.length - 1].style.display = "none";
+				}
+			} else {
+				allProducts[allProducts.length - 1].style.display = "block";
 			}
-			allProducts.forEach((prod, idx) => {
-				idx > 1 ? (prod.style.display = "block") : "";
-			});
 		}
 	}
-
-	/* --------------------------------------------------------------------------------------------------------------------------
-MAIN TRANSFER BLOCKS
------------------------------------------------------------------------------------------------------------------------------*/
-const transferImages = document.getElementById('main-transfer-images');
-const transferImg = document.getElementById('main-transfer-img');
-
-const transferText = document.getElementById('main-transfer-text');
-const transferDesc = document.getElementById('main-transfer-desc');
-
-if (transferText && transferDesc && transferImages && transferImg) {
-  new TransferElements(      
-	{
-      sourceElement: transferImg,
-      breakpoints: {
-        576: {
-          targetElement: transferText,
-          targetPosition: 0         
-        }
-      }
-    },
-	{
-      sourceElement: transferDesc,
-      breakpoints: {
-        576: {
-          targetElement: transferImages,
-          targetPosition: 1          
-        }
-      }
-    }
-  )
-}
-
-/* --------------------------------------------------------------------------------------------------------------------------
-
------------------------------------------------------------------------------------------------------------------------------*/
-
-
 });
+	/* --------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------*/

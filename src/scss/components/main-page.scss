@@ -21,7 +21,7 @@ SECTION ANOUNCE
 		min-height: 491px;
 	}
 	@media (max-width: 410px) {
-		padding-top: 100px;
+		padding-top: 160px;
 	}
 
 	&_image-desktop,
@@ -40,7 +40,7 @@ SECTION ANOUNCE
 	}
 
 	&_image-desktop {
-		background-image: url("../../images/desktop-main.png");
+		background-image: url("../../images/main-page/desktop-main.png");
 		min-height: 701px;
 		@media (min-width: 1200px) {
 			display: block;
@@ -48,7 +48,7 @@ SECTION ANOUNCE
 	}
 
 	&_image-tablet {
-		background-image: url("../../images/tablet-main.png");
+		background-image: url("../../images/main-page/tablet-main.png");
 		min-height: 617px;
 		@media (min-width: 576px) and (max-width: 1200px) {
 			display: block;
@@ -58,9 +58,9 @@ SECTION ANOUNCE
 	&_image-mobile {
 		max-inline-size: 440px;
 		min-inline-size: 360px;
-		background-image: url("../../images/mobile-main.png");
+		background-image: url("../../images/main-page/mobile-main.png");
 		min-height: 491px;
-		background-size: 100%;
+		// background-size: 100%;
 		transform: translateY(-100px);
 		@media (min-width: 0px) and (max-width: 576px) {
 			display: block;
@@ -133,11 +133,7 @@ SECTION ABOUT
 	}
 
 	@include sm {
-		padding-top: 125px;
-	}
-
-	@media (max-width: 410px) {
-		padding-top: 55px;
+		padding-top: 140px;
 	}
 
 	&_mytitle i {
@@ -148,9 +144,10 @@ SECTION ABOUT
 	}
 
 	&_image {
-		padding-top: 64px;
+		padding-top: 63px;
+
 		@include xl {
-			padding-top: 50px;
+			padding-top: 63px;
 		}
 		@include sm {
 			max-width: 162px;
@@ -163,7 +160,7 @@ SECTION ABOUT
 			padding-top: 56px;
 		}
 		@include sm {
-			padding-top: 42px;
+			padding-top: 41px;
 			padding-left: 27.5%;
 		}
 
@@ -183,29 +180,51 @@ SECTION ABOUT
 			justify-content: flex-end;
 		}
 	}
+	.gx-abo{
+		--bs-gutter-x: 20px;
+		@include xl{
+			--bs-gutter-x: 44px;
+		}
+	}
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------
 SECTION BOUTIQUE
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .main-boutique {
-	padding-top: 160px;
+	padding-top: 167px;
+
+	@include xl {
+		padding-top: 160px;
+	}
+	@include sm {
+		padding-top: 160px;
+	}
 
 	&_description {
-		padding-top: 64px;
-		margin-bottom: 32px;
+		padding-top: 63px;
+		margin-bottom: 44px;
 		@include xl {
-			padding-top: 56px;
+			padding-top: 67px;
+			margin-bottom: 42px;
 		}
 		@include sm {
-			padding-top: 42px;
+			padding-top: 63px;
+			margin-bottom: 49px;
 			padding-left: 27.5%;
 		}
 	}
 
 	&_products-all {
 		text-align: center;
-		margin-top: 64px;
+		margin-top: 65px;
+		
+		@include xl {
+			margin-top: 64px;
+		}
+		@media (max-width: 450px) {
+			margin-top: 74px;
+		}
 	}
 }
 
@@ -213,19 +232,98 @@ SECTION BOUTIQUE
 SECTION GALLERY
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .main-gallery {
-	padding-top: 160px;
+	padding-top: 167px;
 
-	&_article {
-		padding-top: 64px;
+	@include xl {
+		padding-top: 161px;
+	}
+
+	@include sm {
+		padding-top: 184px;
+	}
+
+	&_grid {
+		margin-top: 65px;
+
+		@include sm {
+			margin-top: 47px;
+		}
+
+		display: grid;
+		grid-template-columns: 1fr 1fr 2fr 0;
+		grid-template-rows: 1fr;
+		grid-template-areas: "i1 i2 i3 i4";
+		gap: 30px;
+
+		.item-1 {
+			grid-area: i1;
+		}
+		.item-2 {
+			grid-area: i2;
+		}
+		.item-3 {
+			transform: translateX(-10px);
+			grid-area: i3;
+		}
+		.item-4 {
+			grid-area: i4;
+		}
+
+		@include xl {
+			gap: 15px;
+			.item-3 {
+				transform: translateX(0);
+				padding-left: 37px;
+			}
+		}
+
+		@include md {
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-template-areas:
+				"i1 i3"
+				"i4 i2";
+			gap: 21px;
+
+			.item-3 {
+				padding-left: 0;
+			}
+
+			.item-2,
+			.item-4 {
+				padding-top: 32px;
+			}
+		}
+
+		@include sm {
+			max-height: 660px;
+			overflow-y: auto;
+		}
+
+		.adaptive-bottom {
+			@include md {
+				height: 100%;
+				display: flex;
+				align-items: flex-end;
+			}
+			@media (max-width: 420px) {
+				align-items: flex-start;
+				p {
+					padding-top: 0;
+				}
+			}
+		}
 	}
 
 	&_head {
 		h4 {
 			font-weight: 700;
 			font-size: 24px;
-			margin-bottom: 32px;
+			margin-bottom: 64px;
+
 			@include xl {
-				margin-bottom: 32px;
+				margin-bottom: 52px;
+				font-size: 22px;
 			}
 			@include sm {
 				font-size: 22px;
@@ -235,16 +333,26 @@ SECTION GALLERY
 	&_desc {
 		p {
 			line-height: 120%;
-			padding-top: 32px;
-			@include sm{
-				padding-top: 24px;
+			padding-bottom: 32px;
+
+			@include sm {
+				padding-bottom: 24px;
 			}
+		}
+		p.no-padding {
+			padding-bottom: 0;
 		}
 	}
 
 	&_more {
 		text-align: center;
-		margin-top: 64px;
+		margin-top: 67px;
+		@include xl {
+			margin-top: 68px;
+		}
+		@include sm {
+			margin-top: 92px;
+		}
 	}
 	.justify-adaptive {
 		justify-content: center;
@@ -254,29 +362,39 @@ SECTION GALLERY
 	}
 	.transform-adaptive {
 		transform: translateX(-32px);
-	}	
+	}
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------
 SECTION FAQ
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .main-faq {
-	padding-top: 160px;
+	padding-top: 154px;
 	@include xl {
-		padding-top: 130px;
+		padding-top: 148px;
+	}
+	@include sm {
+		padding-top: 133px;
 	}
 	&_mytitle {
 		span {
 			font-style: italic;
 			font-weight: 700;
 		}
+		@include sm {
+			text-align: center;
+		}
 	}
 	&_accordions {
-		padding-top: 64px;
+		padding-top: 60px;
 		padding-inline: 0;
 
 		@include xl {
-			padding-inline: 50px;
+			padding-inline: 60px;
+		}
+		@include sm {
+			padding-top: 36px;
+			padding-inline: 0;
 		}
 		h4 {
 			display: flex;
@@ -321,7 +439,15 @@ SECTION FAQ
 SECTION CONTACTS
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .main-contacts {
-	padding-top: 160px;
+	padding-top: 174px;
+
+	@include xl {
+		padding-top: 160px;
+	}
+
+	@include sm {
+		padding-top: 168px;
+	}
 
 	.justify-adaptive {
 		justify-content: center;
@@ -348,6 +474,12 @@ SECTION CONTACTS
 			color: var(--color-white);
 
 			margin-top: 56px;
+			@include xl {
+				margin-top: 59px;
+			}
+			@include sm {
+				margin-top: 32px;
+			}
 
 			&::placeholder {
 				font-family: var(--font-main);
@@ -365,15 +497,26 @@ SECTION CONTACTS
 			font-style: italic;
 			font-weight: 700;
 			font-size: 40px;
-			@include xl {
-				font-size: 36px;
-			}
 
 			margin-bottom: 38px;
+			@include xl {
+				margin-bottom: 60px;
+				font-size: 36px;
+			}
+			@include md {
+				text-align: center;
+
+				margin-top: 139px;
+				margin-bottom: 53px;
+			}
 		}
 	}
 
-	&_body {
+	&_info {
+		@include md {
+			display: flex;
+			justify-content: center;
+		}
 		p {
 			font-family: var(--font-title);
 			font-weight: 700;
@@ -387,11 +530,23 @@ SECTION CONTACTS
 				padding-left: 35px;
 			}
 		}
+	}
+	&_social {
+		@include md {
+			display: flex;
+			justify-content: center;
+		}
 		.social-box {
 			display: inline-flex;
 			gap: 18px;
+			margin-top: 34px;
 
-			margin-top: 36px;
+			@include xl {
+				margin-top: 36px;
+			}
+			@include md {
+				margin-top: 55px;
+			}
 			a {
 				display: block;
 				width: 35px;

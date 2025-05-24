@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Главная</title>
+  <title>SHOP</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="vendor/css/bootstrap-grid.css">
   <link rel="stylesheet" href="./css/main.min.css">  
@@ -18,7 +18,7 @@
 	<div class="container">
 		<div class="header-row">
 			<a href="#" class="header-logo">
-				<img class="img-responsive" src="./images/logo.png" srcset="./images/logo.png, ../../images/logo@2x.png 2x" alt="Logo image">
+				<img class="img-responsive" src="./images/logo.png" alt="Logo image">
 			</a>
 			<nav class="header-nav" id="desktop-nav">
 				<ul class="menu">
@@ -103,7 +103,7 @@
 			</div>
 		</div>
 		<div class="row justify-adaptive">
-			<div class="col-sm-6 col-9">
+			<div class="col-9 col-sm-6">
 				<div class="main-anounce_description">
 					<p>
 						Čorny Byseł: a name recognized, not announced. His work is initiation, not decoration. To inquire is to seek
@@ -136,7 +136,7 @@
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row gx-abo">
 			<div class="col-sm-3 col-3 col-xl-4"><!-- Dolly --></div>
 			<div class="col-9 col-sm-3 col-xl-2">
 				<div class="main-about_image">
@@ -189,8 +189,8 @@
 
 		<div class="row justify-content-center">
 			<div class="col-md-10 col-sm-12">
-				<div class="main-boutique_products" id="main-boutique">
-					<div class="row g-3 g-sm-4">
+				<div class="main-boutique_products products" id="main-boutique">
+					<div class="row gx-pro gy-pro">
 						<!-- 1 -->
 						<div class="col-6 col-md-4">
 							<a href="#" class="product-card">
@@ -272,47 +272,39 @@
 			</div>
 		</div>
 
-		<div class="row justify-content-center main-gallery_article">
+		<div class="row justify-content-center">
 			<div class="col-12 col-sm-10">
-				<div class="row g-3 g-sm-4">
-					<div class="col-6">
-						<div class="row bred" id="main-transfer-images">
-							<div class="col-sm-6">
-								<img class="img-responsive" src="./images/artist/artist-2-33.png" alt="Artist">
-							</div>
-							<div class="col-12 col-sm-6" id="main-transfer-img">
-								<img class="img-responsive" src="./images/artist/artist-3-33.png" alt="Artist">
-							</div>
-						</div>
+				<div class="main-gallery_grid">
+					<!-- 1 -->
+					<div class="item item-1">
+						<img class="img-responsive" src="./images/artist/artist-2-33.png" alt="Artist">
 					</div>
+					<!-- 2 -->
+					<div class="item item-2">
+						<img class="img-responsive" src="./images/artist/artist-3-33.png" alt="Artist">
+					</div>
+					<!-- 3 -->
+					<div class="item item-3">
+						<div class="main-gallery_head">
+							<h4>On paper, in silence: <br><i>Noir Gold Art appears in print</i></h4>
+						</div>
+						<div class="main-gallery_desc">
+							<p>
+								In April, Noir Gold found its name printed for the first time in the pages of a magazine. Not as a feature
+								draped in fanfare, but as a presence quietly acknowledged. A few pages in, between trends and interviews,
+								there it was: Čorny Byseł, Noir Gold, and the haunting stillness of work that refuses to explain itself.
+							</p>
+						</div>
 
-					<div class="col-6">
-						<div class="row">
-							<div class="col-12">
-								<div class="main-gallery_head">
-									<h4>On paper, in silence: <br><i>Noir Gold Art appears in print</i></h4>
-								</div>
-								<div class="main-gallery_desc">
-									<p>
-										In April, Noir Gold found its name printed for the first time in the pages of a magazine. Not as a
-										feature draped in fanfare, but as a presence quietly acknowledged. A few pages in, between trends
-										and interviews, there it was: Čorny Byseł, Noir Gold, and the haunting stillness of work that
-										refuses to explain itself.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="row" id="main-transfer-text">
-							<div class="col-12 col-sm-6" id="main-transfer-desc">
-								<div class="main-gallery_desc">
-									<p>
-										No announcement had been made. No press release sent. The brand, known mostly in private whispers
-										and by those who seek rather than scroll, was never intended for mass recognition.
-									</p>
-								</div>
-							</div>
+						<div class="main-gallery_desc adaptive-bottom" id="main-transfer-desc">
+							<p class="no-padding">
+								No announcement had been made. No press release sent. The brand, known mostly in private whispers and by
+								those who seek rather than scroll, was never intended for mass recognition.
+							</p>
 						</div>
 					</div>
+					<!-- 4 -->
+					<div class="item item-4" id="main-transfer-cont"></div>
 				</div>
 
 				<div class="main-gallery_more">
@@ -328,7 +320,7 @@
 	<h2 class="visually-hidden">FAQ</h2>
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-sm-10">
+			<div class="col-12 col-sm-10">
 				<div class="main-faq_mytitle">
 					<span>FAQ</span>
 				</div>
@@ -336,7 +328,7 @@
 		</div>
 
 		<div class="row justify-content-center">
-			<div class="col-sm-8 col-xl-6">
+			<div class="col-12 col-md-10 col-lg-8 col-xl-6">
 				<div class="main-faq_accordions">
 					<!-- 1 -->
 					<div class="accordion active">
@@ -450,9 +442,9 @@
 	<h2 class="visually-hidden">Join our mailing list for updates about the boutique and projects</h2>
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-md-6">
 				<div class="row justify-adaptive">
-					<div class="col-sm-10 col-xl-8">
+					<div class="col-md-10 col-xl-8">
 						<div class="main-contacts_mytitle">
 							<span>Join our mailing list for <i>updates</i> about</span>
 							<span class="right"> the boutique and</span>
@@ -468,9 +460,9 @@
 				</div>
 			</div>
 
-			<div class="col-sm-6">
+			<div class="col-md-6">
 				<div class="row justify-content-end">
-					<div class="col-sm-8">
+					<div class="col-md-8">
 						<div class="main-contacts_head">
 							<h2>Contacts</h2>
 						</div>
@@ -478,12 +470,14 @@
 				</div>
 
 				<div class="row justify-content-end">
-					<div class="col-sm-10">
-						<div class="main-contacts_body">
+					<div class="col-md-10">
+						<div class="main-contacts_info">
 							<div class="info-box">
 								<p>Email:<span>info@noirgold.art</span></p>
 								<p>Phone:<span>+1 (234) 567-890</span></p>
 							</div>
+						</div>
+						<div class="main-contacts_social">
 							<div class="social-box">
 								<a href="#">
 									<img class="img-responsive" src="./images/icons-png/twitter.png" alt="Twitter">
@@ -507,10 +501,10 @@
     <footer class="footer">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-7 col-xl-6">
+			<div class="col-12 col-xl-6 col-md-7">
 				<a href="#" class="footer-logo">
 					<span class="footer-logo_img">
-						<img class="img-responsive" src="./images/logo.png" srcset="./images/logo.png, ../../images/logo@2x.png 2x" alt="Logo image">
+						<img class="img-responsive" src="./images/logo.png" alt="Logo image">
 					</span>
 					<span class="footer-logo_text"> Noir <br>&nbsp;&nbsp; <span>gold </span>art </span>
 				</a>
