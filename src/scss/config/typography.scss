@@ -13,14 +13,11 @@ h6 {
 
 [class*="_mytitle"] {
 	font-family: var(--font-title);
-	span {
-		font-weight: 600;
-		font-size: 40px;
-		line-height: 120%;
-
-		@include xl {
-			font-size: 36px;
-		}
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 120%;
+	@include xl {
+		font-size: 36px;
 	}
 }
 
@@ -40,4 +37,12 @@ h2 {
 	@include xl {
 		font-size: 36px;
 	}
+}
+
+h3 {	
+	font-weight: 700;
+	font-size: 36px;
+	@include xl{
+		font-size: 30px;
+	}	
 }

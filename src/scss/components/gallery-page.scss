@@ -1,0 +1,100 @@
+.gallery {
+	&_mytitle {
+		text-align: center;
+
+		padding-top: 65px;
+		margin-bottom: 83px;
+
+		@include xl {
+			text-align: center;
+			padding-top: 66px;
+			margin-bottom: 152px;
+		}
+
+		@include sm {
+			padding-top: 85px;
+			margin-bottom: 85px;
+		}
+
+		@media (min-width: 768px) and (max-width: 1199px) {
+			text-align: left;
+		}
+	}
+
+	&-article {
+		margin-bottom: 297px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+		@include xl {
+			margin-bottom: 231px;
+		}
+		@include sm {
+			margin-bottom: 175px;
+		}
+
+		&_date {
+			margin-bottom: 48px;
+
+			p {
+				text-align: right;
+			}
+
+			@include xl {
+				margin-bottom: 27px;
+				&.first-date {
+					margin-bottom: 42px !important;
+				}
+			}
+			@include sm {
+				margin-bottom: 36px;
+				&.first-date {
+					margin-bottom: 60px !important;
+					p {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		h3 {
+			font-weight: 700;
+			line-height: 110%;
+			max-width: 90%;			
+			@include md {
+				max-width: 100%;
+				margin-bottom: 109px;
+			}
+		}
+
+		/*----------------------------------
+		GRIDS
+		-----------------------------------*/
+		// Grid 1
+		.grid-gall {
+			display: flex;
+			margin-inline: -10px;
+			.column-32 {
+				width: 32%;
+				padding-inline: 10px;
+
+				@include xl {
+					width: 35%;
+				}
+				@include sm {
+					width: 100%;
+				}
+			}
+			.column-68 {
+				width: 68%;
+				@include xl {
+					width: 65%;
+				}
+				@include sm {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

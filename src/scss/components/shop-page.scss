@@ -48,7 +48,7 @@ SECTION LABEL
 	}
 
 	&_image-desktop {
-		background-image: url("../../images/desktop-shop.png");
+		background-image: url("../../images/shop-page/desktop-shop.png");
 		min-height: 540px;
 		@media (min-width: 1200px) {
 			display: block;
@@ -56,7 +56,7 @@ SECTION LABEL
 	}
 
 	&_image-tablet {
-		background-image: url("../../images/tablet-shop.png");
+		background-image: url("../../images/shop-page/tablet-shop.png");
 		min-height: 433px;
 		@media (min-width: 576px) and (max-width: 1200px) {
 			display: block;
@@ -65,7 +65,7 @@ SECTION LABEL
 
 	&_image-mobile {
 		max-inline-size: 410px;
-		background-image: url("../../images/mobile-shop.png");
+		background-image: url("../../images/shop-page/mobile-shop.png");
 		min-height: 571px;
 		background-position: 60% 0;
 		@media (min-width: 0px) and (max-width: 576px) {
@@ -102,6 +102,8 @@ SECTION LABEL
 SECTION PRODUCTS
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .shop-products {
+
+	// Filter elemenet
 	&_filter {
 		display: flex;
 		align-items: center;

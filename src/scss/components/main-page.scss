@@ -179,13 +179,7 @@ SECTION ABOUT
 		@include sm {
 			justify-content: flex-end;
 		}
-	}
-	.gx-abo{
-		--bs-gutter-x: 20px;
-		@include xl{
-			--bs-gutter-x: 44px;
-		}
-	}
+	}	
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------
@@ -218,7 +212,7 @@ SECTION BOUTIQUE
 	&_products-all {
 		text-align: center;
 		margin-top: 65px;
-		
+
 		@include xl {
 			margin-top: 64px;
 		}
@@ -360,8 +354,11 @@ SECTION GALLERY
 			justify-content: flex-end;
 		}
 	}
-	.transform-adaptive {
-		transform: translateX(-32px);
+
+	.transform-adaptive{
+		@include sm {			
+			padding-left: 16px;
+		}
 	}
 }
 

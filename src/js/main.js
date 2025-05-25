@@ -15,23 +15,17 @@ BASE HELPERS
 	/* --------------------------------------------------------------------------------------------------------------------------
 BURGER MENU CODE
 -----------------------------------------------------------------------------------------------------------------------------*/
-	const burgerBtn = document.querySelector("#mobile-burger");
-	const burgerClose = document.querySelector("#mobile-close");
+	const burgerBtn = document.querySelector("#mobile-burger");	
 	const mobileNav = document.querySelector("#mobile-nav");
 	const body = document.querySelector("body");
 
-	if (burgerBtn && burgerClose && mobileNav) {
+	if (burgerBtn && mobileNav) {
 		burgerBtn.addEventListener("click", () => {
 			mobileNav.classList.toggle("show");
 			body.classList.toggle("no-scroll");
-		});
+		});	
 
-		burgerClose.addEventListener("click", () => {
-			mobileNav.classList.remove("show");
-			body.classList.remove("no-scroll");
-		});
-
-		mobileNav.addEventListener("dblclick", () => {
+		mobileNav.addEventListener("click", () => {
 			mobileNav.classList.remove("show");
 			body.classList.remove("no-scroll");
 		});

@@ -2,51 +2,52 @@
 FOOTER
 ---------------------------------------------------------------------------------------------------------------------------------------*/
 .footer {
-	margin-top: 115px;	
+	margin-top: 115px;
 
 	// max-inline-size: 1440px;
 	// width: 100%;
-	// margin-inline: auto;	
+	// margin-inline: auto;
 	min-height: 269px;
 
-	background-image: url("../../images/footer.png");
+	background-image: url("../../images/footer/desktop-footer.png");
 	background-repeat: no-repeat;
 	background-size: cover;
-	
-	padding-top: 48px;	
+
+	padding-top: 48px;
+
 	@include xl {
-		margin-top: 138px;
+		margin-top: 138px;		
 		background-position: 50% 0;
-	
 	}
 
 	@include sm {
-		margin-top: 94px;
+		margin-top: 108px;
+		
 		padding-top: 65px;
-		background-image: url("../../images/footer-mobile.png");
-	}	
-
+		padding-bottom: 77px;
+		background-image: url("../../images/footer/mobile-footer.png");
+	}
 
 	// LOGO
 	&-logo {
-		position: relative;	
+		position: relative;
 		display: inline-flex;
 		flex-direction: row;
 		align-items: center;
 		gap: 25px;
-		top:-15px;
+		top: -15px;
 		left: -10px;
 
-		@include xl{
+		@include xl {
 			left: 0px;
 		}
-		@include md{
+		@include md {
 			margin-bottom: 15px;
 		}
-		@include sm{
-			left: -25px;			
+		@include sm {
+			left: -25px;
 		}
-		
+
 		&_img {
 			display: block;
 			width: 109px;
@@ -73,25 +74,23 @@ FOOTER
 			@include xl {
 				font-size: 32px;
 				left: -25px;
-			}		
-			
-			@include sm{
+			}
+
+			@include sm {
 				font-size: 36px;
-				top: -5px;				
-			}			
+				top: -5px;
+			}
 		}
 	}
 
-
 	// LIST
-	@include md{
-		ul.adaptive-left-50{
+	@include md {
+		ul.adaptive-left-50 {
 			padding-left: 50%;
 		}
 	}
 
-
-	ul {		
+	ul {
 		li a {
 			font-family: var(--font-main);
 			font-weight: 400;
@@ -116,7 +115,7 @@ FOOTER
 
 			text-align: center;
 
-			margin-top: 77px;			
+			margin-top: 77px;
 		}
 		@include sm {
 			margin-top: 90px;
