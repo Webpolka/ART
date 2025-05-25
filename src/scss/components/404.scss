@@ -1,0 +1,68 @@
+/* -------------------------------------------------------------------------------------------------------------------------
+404
+---------------------------------------------------------------------------------------------------------------------------*/
+.page404 {
+	.row {
+		margin-top: 131px;
+		@include xl {
+			margin-top: 95px;
+		}
+        @include sm{
+            margin-top: 125px;
+        }
+	}
+	p {
+		margin-top: 32px;
+        margin-left: 5px;
+		@include xl {
+			padding-inline: 30%;
+            margin-top: 20px;
+            margin-left: 0;
+		}
+        @include md{
+            padding-inline: 10%;
+        }
+	}
+	h2 {
+        padding-top: 5px;
+        margin-left: 15px;
+		@include xl {
+            padding-top: 0;
+			text-align: center;
+			margin-top: 60px;
+            margin-left: 0;
+		}
+        @include sm{
+            margin-top: 70px;
+        }
+	}
+	.col-12 {
+		@include xl {
+			text-align: center;
+		}
+	}
+
+	.btn {
+		display: inline-block;
+		margin-top: 16px;
+        margin-left: 20px;
+		@include xl {
+			margin-top: 43px;           
+		}
+	}
+	.img-404 {
+		display: block;
+		margin-inline: auto;
+		height: auto;
+		object-fit: cover;
+		overflow: hidden;
+        width: 60%;
+		@include xl {
+			width: 39%;
+		}
+        @include sm {
+			width: 92%;
+		}
+
+	}
+}

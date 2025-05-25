@@ -435,6 +435,89 @@ body {
   border: 1px solid green;
 }
 
+/* -------------------------------------------------------------------------------------------------------------------------
+404
+---------------------------------------------------------------------------------------------------------------------------*/
+.page404 .row {
+  margin-top: 131px;
+}
+@media (max-width: 1200px) {
+  .page404 .row {
+    margin-top: 95px;
+  }
+}
+@media (max-width: 576px) {
+  .page404 .row {
+    margin-top: 125px;
+  }
+}
+.page404 p {
+  margin-top: 32px;
+  margin-left: 5px;
+}
+@media (max-width: 1200px) {
+  .page404 p {
+    padding-inline: 30%;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .page404 p {
+    padding-inline: 10%;
+  }
+}
+.page404 h2 {
+  padding-top: 5px;
+  margin-left: 15px;
+}
+@media (max-width: 1200px) {
+  .page404 h2 {
+    padding-top: 0;
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 576px) {
+  .page404 h2 {
+    margin-top: 70px;
+  }
+}
+@media (max-width: 1200px) {
+  .page404 .col-12 {
+    text-align: center;
+  }
+}
+.page404 .btn {
+  display: inline-block;
+  margin-top: 16px;
+  margin-left: 20px;
+}
+@media (max-width: 1200px) {
+  .page404 .btn {
+    margin-top: 43px;
+  }
+}
+.page404 .img-404 {
+  display: block;
+  margin-inline: auto;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+  width: 60%;
+}
+@media (max-width: 1200px) {
+  .page404 .img-404 {
+    width: 39%;
+  }
+}
+@media (max-width: 576px) {
+  .page404 .img-404 {
+    width: 92%;
+  }
+}
+
 /*--------------------------------------------------------------------------------------------------------------------------------
 GLOBAL
 --------------------------------------------------------------------------------------------------------------------------------*/
@@ -970,6 +1053,9 @@ FOOTER
   }
 }
 
+/* -------------------------------------------------------------------------------------------------------------------------
+GALLERY
+---------------------------------------------------------------------------------------------------------------------------*/
 .gallery_mytitle {
   text-align: center;
   padding-top: 65px;
@@ -1131,12 +1217,12 @@ HEADER
   display: inline-flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 115px;
+  gap: 100px;
   padding-right: 10px;
 }
 @media (max-width: 1200px) {
   .header-nav ul {
-    gap: 70px;
+    gap: 75px;
   }
 }
 .header-nav ul li a {

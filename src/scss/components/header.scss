@@ -51,10 +51,10 @@ HEADER
 			display: inline-flex;
 			align-items: center;
 			justify-content: flex-end;
-			gap: 115px;
+			gap: 100px;
 
 			@include xl{
-				gap: 70px;
+				gap: 75px;
 			}
 
 			padding-right: 10px;
