@@ -4,7 +4,8 @@ SECTION ANOUNCE
 .main-anounce {
 	position: relative;
 	margin-inline: auto;
-	
+
+	margin-bottom: 50px;	
 	@include xxl {
 		padding-top: 225px;
 		min-height: 701px;
@@ -14,11 +15,13 @@ SECTION ANOUNCE
 		padding-top: 145px;
 		max-inline-size: 962px;
 		min-height: 617px;
+		margin-bottom: 0px;
 	}
 	@include sm {
 		padding-top: 170px;
 		max-inline-size: 440px;
 		min-height: 491px;
+		margin-bottom: 70px;
 	}
 	@media (max-width: 410px) {
 		padding-top: 160px;
@@ -126,14 +129,17 @@ SECTION ANOUNCE
 SECTION ABOUT
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .main-about {
-	padding-top: 125px;
+	padding-top: 75px;
+	margin-bottom: 155px;
 
 	@include xl {
 		padding-top: 70px;
+		margin-bottom: 145px;
 	}
 
 	@include sm {
-		padding-top: 140px;
+		padding-top: 70px;
+		margin-bottom: 145px;
 	}
 
 	&_mytitle i {
@@ -186,13 +192,13 @@ SECTION ABOUT
 SECTION BOUTIQUE
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .main-boutique {
-	padding-top: 167px;
+	padding-top: 12px;
 
 	@include xl {
-		padding-top: 160px;
+		padding-top: 15px;
 	}
 	@include sm {
-		padding-top: 160px;
+		padding-top: 15px;
 	}
 
 	&_description {
@@ -227,13 +233,16 @@ SECTION GALLERY
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .main-gallery {
 	padding-top: 167px;
+	margin-bottom: 120px;
 
 	@include xl {
 		padding-top: 161px;
+		margin-bottom: 110px;
 	}
 
 	@include sm {
 		padding-top: 184px;
+		margin-bottom: 100px;
 	}
 
 	&_grid {
@@ -366,12 +375,16 @@ SECTION GALLERY
 SECTION FAQ
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .main-faq {
-	padding-top: 154px;
+	padding-top: 34px;
+	margin-bottom: 100px;
+
 	@include xl {
-		padding-top: 148px;
+		padding-top: 38px;
+		margin-bottom: 100px;
 	}
 	@include sm {
-		padding-top: 133px;
+		padding-top: 33px;
+		margin-bottom: 100px;
 	}
 	&_mytitle {
 		span {
@@ -436,14 +449,14 @@ SECTION FAQ
 SECTION CONTACTS
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .main-contacts {
-	padding-top: 174px;
+	padding-top: 74px;
 
 	@include xl {
-		padding-top: 160px;
+		padding-top: 30px;
 	}
 
 	@include sm {
-		padding-top: 168px;
+		padding-top: 38px;
 	}
 
 	.justify-adaptive {

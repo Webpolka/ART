@@ -1,0 +1,261 @@
+/*--------------------------------------------------------------------------------------------------------------------------------
+CART PAGE
+--------------------------------------------------------------------------------------------------------------------------------*/
+.cart {
+	&_mytitle {
+		padding-top: 31px;
+		margin-bottom: 65px;
+		text-align: center;
+
+		@include xl {
+			padding-top: 41px;
+			margin-bottom: 56px;
+		}
+		@include sm {
+			padding-top: 70px;
+			margin-bottom: 98px;
+		}
+	}
+
+	&-products {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 26px;
+
+		padding-bottom: 64px;
+
+		@include sm {
+		}
+		.products-item {
+			display: flex;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			padding: 21px 34px 21px 19px;
+
+			@include sm {
+				padding-right: 21px;
+			}
+
+			&_image {
+				width: 152px;
+				height: 152px;
+				justify-self: flex-start;
+				flex-shrink: 0;
+				@include xl {
+					width: 154px;
+					height: 154px;
+				}
+				@media (max-width: 375px) {
+					width: 100px;
+					height: 100px;
+				}
+			}
+			&_box {
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				@include md {
+					flex-direction: column;
+				}
+			}
+			&_content {
+				display: block;
+				flex-grow: 1;
+				padding-inline: 30px;
+				@include xl {
+					padding-inline: 25px;
+				}
+				&:hover {
+					cursor: pointer;
+					h3,
+					p {
+						color: var(--color-hover);
+					}
+				}
+
+				@include xl {
+					padding-inline: 23px;
+				}
+
+				h3 {
+					font-family: var(--font-main);
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 133%;
+					color: rgba(255, 255, 255, 0.87);
+					transition: all 0.3s ease-in-out;
+
+					@include xl {
+						font-size: 14px;
+					}
+					@media (max-width: 375px) {
+						font-size: 13px;
+					}
+				}
+
+				p {
+					font-style: italic;
+					font-weight: 400;
+					font-size: 14px;
+					color: rgba(255, 255, 255, 0.68);
+					transition: all 0.3s ease-in-out;
+
+					@include xl {
+						font-size: 12px;
+					}
+					padding-top: 3px;
+				}
+			}
+			&_price {
+				text-align: right;
+
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				@include md {
+					flex-direction: row;
+					align-items: flex-end;
+				}
+
+				span {
+					position: relative;
+					display: block;
+					font-family: var(--font-title);
+					top: 5px;
+					font-weight: 400;
+					font-size: 24px;
+					line-height: 133%;
+					color: rgba(255, 255, 255, 0.87);
+					@include xl {
+						font-size: 22px;
+					}
+					@include md {
+						padding-left: 26px;
+					}
+				}
+				.delete {
+					font-weight: 400;
+					font-size: 12px;
+					line-height: 133%;
+					text-transform: uppercase;
+					color: rgba(255, 255, 255, 0.6);
+					transition: all 0.3s ease-in-out;
+
+					@include xl {
+						font-size: 10px;
+					}
+					&:hover {
+						color: var(--color-hover);
+					}
+				}
+			}
+		}
+	}
+	&-btn {
+		text-align: center;
+		@include xl {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+// .cart {
+// 	&_item {
+// 		display: flex;
+// 		flex-direction: column;
+// 		justify-content: space-between;
+// 		gap: 50px;
+
+// 		padding-bottom: 36px;
+// 		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+// 		@include xl {
+// 			gap: 39px;
+// 			padding-bottom: 31px;
+// 		}
+// 		@include sm {
+// 			gap: 36px;
+// 			padding-bottom: 30px;
+// 		}
+// 		&-item {
+// 			display: flex;
+
+// 			@include xl {
+// 			}
+// 			@include sm {
+// 			}
+
+// 			&_image {
+// 				width: 94px;
+// 				height: 93px;
+// 				justify-self: flex-start;
+// 				flex-shrink: 0;
+// 				@include xl {
+// 					width: 75px;
+// 					height: 75px;
+// 				}
+// 			}
+// 			&_content {
+// 				display: block;
+// 				flex-grow: 1;
+// 				padding-inline: 32px;
+// 				&:hover {
+// 					cursor: pointer;
+// 					h3,
+// 					p {
+// 						color: var(--color-hover);
+// 					}
+// 				}
+
+// 				@include xl {
+// 					padding-inline: 23px;
+// 				}
+
+// 				h3 {
+// 					font-family: var(--font-main);
+// 					font-weight: 400;
+// 					font-size: 16px;
+// 					line-height: 133%;
+// 					color: rgba(255, 255, 255, 0.87);
+// 					transition: all 0.3s ease-in-out;
+
+// 					@include xl {
+// 						font-size: 12px;
+// 					}
+// 				}
+
+// 				p {
+// 					font-style: italic;
+// 					font-weight: 400;
+// 					font-size: 14px;
+// 					color: rgba(255, 255, 255, 0.68);
+// 					transition: all 0.3s ease-in-out;
+
+// 					@include xl {
+// 						font-size: 10px;
+// 					}
+// 					padding-top: 3px;
+// 				}
+// 			}
+// 			&_price {
+// 				justify-self: flex-end;
+// 				text-align: right;
+
+// 				span {
+// 					position: relative;
+// 					top: -10px;
+// 					display: block;
+// 					font-family: var(--font-title);
+// 					font-weight: 400;
+// 					font-size: 24px;
+// 					line-height: 133%;
+// 					color: rgba(255, 255, 255, 0.87);
+// 					@include xl {
+// 						font-size: 18px;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }

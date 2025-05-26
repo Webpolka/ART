@@ -15,7 +15,7 @@ BASE HELPERS
 	/* --------------------------------------------------------------------------------------------------------------------------
 BURGER MENU CODE
 -----------------------------------------------------------------------------------------------------------------------------*/
-	const burgerBtn = document.querySelector("#mobile-burger");	
+	const burgerBtn = document.querySelector("#mobile-burger");
 	const mobileNav = document.querySelector("#mobile-nav");
 	const body = document.querySelector("body");
 
@@ -23,7 +23,7 @@ BURGER MENU CODE
 		burgerBtn.addEventListener("click", () => {
 			mobileNav.classList.toggle("show");
 			body.classList.toggle("no-scroll");
-		});	
+		});
 
 		mobileNav.addEventListener("click", () => {
 			mobileNav.classList.remove("show");
@@ -41,7 +41,7 @@ ACCORDION
 		button: ".accordion-btn",
 		panel: ".accordion-panel",
 		activeClass: "active",
-	}).listener();	
+	}).listener();
 
 	/* --------------------------------------------------------------------------------------------------------------------------
 MAIN TRANSFER BLOCKS
@@ -81,6 +81,26 @@ SHOP PRODUCTS - ADAPTIVE TO 767px SHOW PAIR
 		}
 	}
 });
-	/* --------------------------------------------------------------------------------------------------------------------------
+/* --------------------------------------------------------------------------------------------------------------------------
+PAYMENT PLACEHOLDER
+-----------------------------------------------------------------------------------------------------------------------------*/
+const expireDate = document.getElementById("expiry-date");
+function updatePlaceholder() {
+	console.log('yyy');
+	
+	if (window.innerWidth <= 768) {
+		//  Пример ширины экрана для мобильных
+		expireDate.placeholder = "MM/YY";
+	} else {
+		expireDate.placeholder = ""; //  Удалить placeholder для десктопа
+	}
+}
+//  Вызвать функцию при загрузке страницы и при изменении размера окна
+if (expireDate) {
+	window.onload = updatePlaceholder;
+	window.onresize = updatePlaceholder;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------------------------------*/

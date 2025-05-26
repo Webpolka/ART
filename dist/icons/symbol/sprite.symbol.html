@@ -19,6 +19,7 @@ They might well be outsourced to an external stylesheet of course.
 -->
 
 <style type="text/css">
+	.svg-check-solid-dims { width: 448px; height: 512px; }
 	.svg-close-cookies-dims { width: 10px; height: 10px; }
 </style>
 <!--
@@ -42,6 +43,7 @@ for further details on how to create this embeddable sprite variant.
 -->
 
 <svg width="0" height="0" style="position:absolute">
+		<symbol viewBox="0 0 448 512" id="check-solid" xmlns="http://www.w3.org/2000/svg"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7l233.4-233.3c12.5-12.5 32.8-12.5 45.3 0z"/></symbol>
 		<symbol fill="none" viewBox="0 0 10 10" id="close-cookies" xmlns="http://www.w3.org/2000/svg"><path transform="matrix(.67627 .73665 -.67627 .73665 1 1)" stroke="#fff" stroke-opacity=".7" d="M0-.5h10.985"/><path transform="scale(.9564 1.04178) rotate(-45 11.357 2.38)" stroke="#fff" stroke-opacity=".7" d="M0-.5h10.985"/></symbol>
 </svg>
 
@@ -72,6 +74,17 @@ embedded above. They may be styled via CSS.
 			<h3>A) Inline SVG with embedded sprite</h3>
 			<ul>
 
+				<li title="check-solid">
+					<div class="icon-box">
+
+						<!-- check-solid -->
+						<svg class="svg-check-solid-dims">
+							<use xlink:href="#check-solid"></use>
+						</svg>
+
+					</div>
+					<h2>check-solid</h2>
+				</li>
 				<li title="close-cookies">
 					<div class="icon-box">
 
@@ -104,6 +117,17 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 			<h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
 			<ul>
 
+				<li title="check-solid">
+					<div class="icon-box">
+
+						<!-- check-solid -->
+						<svg class="svg-check-solid-dims">
+							<use xlink:href="sprite.svg#check-solid"></use>
+						</svg>
+
+					</div>
+					<h2>check-solid</h2>
+				</li>
 				<li title="close-cookies">
 					<div class="icon-box">
 
@@ -123,7 +147,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Mon, 26 May 2025 05:11:26 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+			<p>Generated at Mon, 26 May 2025 17:28:16 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>

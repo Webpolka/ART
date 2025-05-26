@@ -16,13 +16,13 @@ FOOTER
 	padding-top: 48px;
 
 	@include xl {
-		margin-top: 138px;		
+		margin-top: 138px;
 		background-position: 50% 0;
 	}
 
 	@include sm {
 		margin-top: 108px;
-		
+
 		padding-top: 65px;
 		padding-bottom: 77px;
 		background-image: url("../../images/footer/mobile-footer.png");
@@ -97,6 +97,10 @@ FOOTER
 			font-size: 14px;
 			line-height: 133%;
 			color: var(--color-white);
+			transition: all 0.3s ease-in-out;
+			&:hover {
+				color: var(--color-hover);
+			}
 		}
 		li:not(:last-child) {
 			margin-bottom: 20px;
