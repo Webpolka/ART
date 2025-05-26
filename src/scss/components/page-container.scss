@@ -1,0 +1,19 @@
+/*-------------------------------------------------------------------------------------------------------------------------------------
+PAGE CONTAINER - FOR ALL PAGES FROM ADMIN
+--------------------------------------------------------------------------------------------------------------------------------------*/
+.page-container {
+	h1,
+	h2 {
+		text-align: center;
+		padding-top: 31px;
+		margin-bottom: 64px;
+        @include xl{
+            padding-top: 61px;
+            margin-bottom: 61px;
+        }
+        @include sm{
+            padding-top: 85px;
+            margin-bottom: 103px;
+        }
+	}   
+}

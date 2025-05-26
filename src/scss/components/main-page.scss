@@ -4,7 +4,7 @@ SECTION ANOUNCE
 .main-anounce {
 	position: relative;
 	margin-inline: auto;
-
+	
 	@include xxl {
 		padding-top: 225px;
 		min-height: 701px;
@@ -179,7 +179,7 @@ SECTION ABOUT
 		@include sm {
 			justify-content: flex-end;
 		}
-	}	
+	}
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------
@@ -327,14 +327,14 @@ SECTION GALLERY
 	&_desc {
 		p {
 			line-height: 120%;
-			padding-bottom: 32px;
+			margin-bottom: 32px;
 
 			@include sm {
-				padding-bottom: 24px;
+				margin-bottom: 24px;
 			}
 		}
 		p.no-padding {
-			padding-bottom: 0;
+			margin-bottom: 0;
 		}
 	}
 
@@ -355,8 +355,8 @@ SECTION GALLERY
 		}
 	}
 
-	.transform-adaptive{
-		@include sm {			
+	.transform-adaptive {
+		@include sm {
 			padding-left: 16px;
 		}
 	}

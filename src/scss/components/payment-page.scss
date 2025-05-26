@@ -1,0 +1,277 @@
+/* -------------------------------------------------------------------------------------------------------------------------
+PAYMENT PAGE
+---------------------------------------------------------------------------------------------------------------------------*/
+.payment {
+	// Title
+	&_mytitle {
+		padding-top: 31px;
+		margin-bottom: 59px;
+		text-align: center;
+
+		@include xl {
+			padding-top: 41px;
+			margin-bottom: 58px;
+		}
+	}
+
+	// Form
+	&_form {
+		padding-right: 10px;
+
+		&-item {
+			margin-bottom: 64px;
+			&.margin-bottom-last {
+				margin-bottom: 42px;
+			}
+
+			label {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 133%;
+				text-transform: capitalize;
+				color: rgba(255, 255, 255, 0.5);
+
+				&.inline-block {
+					display: inline-block;
+					padding-top: 10px;
+				}
+
+				&.full-block {
+					display: block;
+					padding-top: 22px;
+					margin-bottom: 10px;
+				}
+				&.small-top-padding {
+					padding-top: 10px !important;
+				}
+			}
+
+			input[type="text"],
+			input[type="number"] {
+				width: 100%;
+				min-height: 34px;
+				background: rgba(217, 217, 217, 0.1);
+				padding-inline: 16px;
+				color: var(--color-white);
+			}
+		}
+		&-btn {
+			text-align: center;
+		}
+
+		.padding-left-15 {
+			padding-left: 15px;
+		}
+		/*--------------------------------------------------------------------------------------------------------------------------------
+         PAYMENT PAGE - FORM CUSTOM LINES
+          -------------------------------------------------------------------------------------------------------------------------------*/
+		.shipment-line,
+		.information-line1,
+		.information-line2,
+		.billing-line {
+			display: grid;
+		}
+		.shipment-line,
+		.billing-line {
+			grid-template-columns: 51fr 18fr 31fr;
+			&_item {
+				&:nth-child(1) {
+					padding-right: 6%;
+				}
+				&:nth-child(2) {
+					padding-left: 13%;
+					padding-right: 10%;
+				}
+				&:nth-child(3) {
+					padding-left: 7.5%;
+				}
+			}
+		}
+		.information-line1 {
+			grid-template-columns: 51fr 49fr;
+			&_item {
+				&:nth-child(1) {
+					padding-right: 5%;
+				}
+				&:nth-child(2) {
+					padding-left: 5.5%;
+				}
+			}
+		}
+		.information-line2 {
+			grid-template-columns: 65fr 35fr;
+			&_item {
+				&:nth-child(1) {
+					padding-right: 11.5%;
+				}
+				&:nth-child(2) {
+					padding-left: 19%;
+				}
+			}
+		}
+	}
+
+	/*--------------------------------------------------------------------------------------------------------------------------------
+     PAYMENT PAGE - ORDER BLOCK
+     -------------------------------------------------------------------------------------------------------------------------------*/
+	&_orders {
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		padding: 32px;
+
+		@include xl {
+			padding: 25px;
+		}
+		@include sm {
+		}
+
+		h4 {
+			text-align: center;
+			padding-top: 6px;
+			margin-bottom: 36px;
+			@include xl {
+				margin-bottom: 31px;
+			}
+			@include sm {
+			}
+		}
+
+		.orders {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 50px;
+
+			padding-bottom: 36px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+			@include xl {
+				gap: 39px;
+				padding-bottom: 31px;
+			}
+			&-item {
+				display: flex;                                           
+               
+				@include xl {
+				}
+				@include sm {
+				}
+
+				&_image {
+					width: 94px;
+					height: 93px;
+					justify-self: flex-start;
+					flex-shrink: 0;
+					@include xl {
+						width: 75px;
+						height: 75px;
+					}
+				}
+				&_content {
+					flex-grow: 1;
+					padding-inline: 32px;
+					@include xl {
+						padding-inline: 23px;
+					}
+					@include sm {						
+					}
+
+					h3 {
+						font-family: var(--font-main);
+						font-weight: 400;
+						font-size: 16px;
+						line-height: 133%;
+						color: rgba(255, 255, 255, 0.87) !important;
+
+						@include xl {
+							font-size: 12px;
+						}
+					}
+
+					p {
+						font-style: italic;
+						font-weight: 400;
+						font-size: 14px;
+						color: rgba(255, 255, 255, 0.68);
+						@include xl {
+							font-size: 10px;
+						}
+						padding-top: 3px;
+					}
+				}
+				&_price {
+					justify-self: flex-end;
+					text-align: right;
+
+					span {
+						position: relative;
+						top: -10px;
+						display: block;
+						font-family: var(--font-title);
+						font-weight: 400;
+						font-size: 24px;
+						line-height: 133%;
+						color: rgba(255, 255, 255, 0.87);
+						@include xl {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+		}
+		// Totals items
+		.totals {
+			padding-top: 44px;
+			margin-bottom: 15px;
+
+			@include xl {
+				padding-top: 38px;
+				margin-bottom: 11px;
+			}
+
+			&-item {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				&:last-child {
+					padding-top: 17px;
+				}
+
+				@include xl {
+					&:last-child {
+						padding-top: 12px;
+					}
+				}
+
+				&_desc {
+					width: 68%;
+					font-size: 14px;
+					padding-left: 20%;
+					&:not(:last-child) {
+						margin-bottom: 10px;
+					}
+
+					@include xl {
+						font-size: 12px;
+						&:not(:last-child) {
+							margin-bottom: 8px;
+						}
+					}
+					@include sm {
+						padding-left: 64px;
+					}
+					@media (max-width: 375px) {
+						padding-left: 36px;
+					}
+				}
+				&_value {
+					width: 32%;
+					font-size: 14px;
+					@include xl {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}

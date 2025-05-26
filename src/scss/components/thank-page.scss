@@ -1,0 +1,133 @@
+/* -------------------------------------------------------------------------------------------------------------------------
+THANKS PAGE
+---------------------------------------------------------------------------------------------------------------------------*/
+.thank {
+	&_mytitle {
+		padding-top: 119px;
+		margin-bottom: 63px;
+
+		@include xl {
+			padding-top: 99px;
+			margin-bottom: 61px;
+		}
+		@include sm {
+			padding-top: 83px;
+			margin-bottom: 69px;
+
+			display: flex;		
+			width: 100%;
+
+			span {
+				width: 100%;
+				max-width: 284px;
+				display: block;
+				text-align: left;				
+			}
+			.sm-right {
+				text-align: right;
+				width: 100%;
+			}
+		}
+		@media (max-width: 375px) {
+			.sm-center {
+				width: 85%;
+			}
+		}
+	}
+	&_description {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		@include xl {
+			gap: 16px;
+		}
+	}
+	&_details {
+		@include md {
+			padding-top: 64px;
+		}
+		h4 {
+			margin-bottom: 40px;
+			@include xl {
+				margin-bottom: 25px;
+			}
+			@include sm {
+				margin-bottom: 23px;
+			}
+		}
+		.detail {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			flex-wrap: wrap;
+
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+
+			@include xl {
+				&:not(:last-child) {
+					margin-bottom: 5px;
+				}
+			}
+
+			margin-inline: -10px;
+			.detail_desc {
+				width: 66%;
+				padding-inline: 10px;
+				font-size: 14px;
+				@include xl {
+					font-size: 12px;
+				}
+				@include sm {
+					padding-left: 64px;
+				}
+				@media (max-width:375px) {
+					padding-left: 36px;
+				}
+			}
+			.detail_value {
+				width: 33%;
+				padding-inline: 10px;
+				font-size: 14px;
+				@include xl {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	&_products {
+		padding-top: 155px;
+
+		@include xl {
+			padding-top: 147px;
+			margin-bottom: 5px;
+		}
+
+		@include sm {
+			padding-top: 99px;
+			margin-bottom: -16px;
+		}
+
+		h3.products-title {
+			margin-bottom: 54px;
+			@include xl {
+				margin-bottom: 42px;
+			}
+			@include sm {
+				margin-bottom: 36px;
+			}
+		}
+
+		.product-card {
+			padding: 16px;
+			@include lg {
+				padding: 20px;
+			}
+			@include sm {
+				padding: 16px;
+			}
+		}
+	}
+}
