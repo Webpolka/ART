@@ -2,6 +2,14 @@
 THANKS PAGE
 ---------------------------------------------------------------------------------------------------------------------------*/
 .thank {
+	margin-bottom: 116px;
+	@include xl{
+		margin-bottom: 121px;
+	}
+	@include sm{
+		margin-bottom: 103px;
+	}
+
 	&_mytitle {
 		padding-top: 119px;
 		margin-bottom: 63px;

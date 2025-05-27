@@ -6,7 +6,7 @@ SECTION SHOP - LABEL
 	position: relative;
 	margin-inline: auto;
 
-	margin-bottom: 95px;	
+	margin-bottom: 95px;
 
 	@include xxl {
 		max-inline-size: 1200px;
@@ -102,6 +102,13 @@ SECTION SHOP - LABEL
 SECTION SHOP - PRODUCTS
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .shop-products {
+	margin-bottom: 116px;
+	@include xl {
+		margin-bottom: 138px;
+	}
+	@include sm {
+		margin-bottom: 94px;
+	}
 
 	// Filter elemenet
 	&_filter {
@@ -110,24 +117,24 @@ SECTION SHOP - PRODUCTS
 		justify-content: flex-end;
 		padding: 0 52px;
 
-        margin-bottom: 25px;
-        @include xl{
-            margin-bottom: 55px;
-        }
+		margin-bottom: 25px;
+		@include xl {
+			margin-bottom: 55px;
+		}
 
-        @include sm{
-            padding:0;
-            margin-bottom: 20px;
-        }
+		@include sm {
+			padding: 0;
+			margin-bottom: 20px;
+		}
 
-		button {			
+		button {
 			font-weight: 400;
 			font-size: 20px;
-			line-height: 133%;			
-			color: var(--color-white);   
-            @include sm{
-                font-size: 16px;
-            }        
+			line-height: 133%;
+			color: var(--color-white);
+			@include sm {
+				font-size: 16px;
+			}
 		}
 	}
 }

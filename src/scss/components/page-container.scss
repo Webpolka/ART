@@ -2,6 +2,13 @@
 PAGE CONTAINER - FOR ALL PAGES FROM ADMIN
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .page-container {
+    margin-bottom: 116px;
+    @include xl{
+        margin-bottom: 121px;
+    }
+    @include sm{
+        margin-bottom: 103px;
+    }
 	h1,
 	h2 {
 		text-align: center;

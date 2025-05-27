@@ -5,7 +5,7 @@ SECTION ANOUNCE
 	position: relative;
 	margin-inline: auto;
 
-	margin-bottom: 50px;	
+	margin-bottom: 50px;
 	@include xxl {
 		padding-top: 225px;
 		min-height: 701px;
@@ -294,38 +294,43 @@ SECTION GALLERY
 
 			.item-2,
 			.item-4 {
-				padding-top: 32px;
+				img,
+				.gallery-box {
+					padding-top: 32px;
+				}
 			}
 		}
 
-		@include sm {
-			max-height: 660px;
-			overflow-y: auto;
-		}
-
 		.adaptive-bottom {
-			@include md {
-				height: 100%;
+			@include md {				
 				display: flex;
 				align-items: flex-end;
 			}
 			@media (max-width: 420px) {
-				align-items: flex-start;
-				p {
-					padding-top: 0;
+				align-items: flex-start;				
+			}
+		}
+		.gallery-box{
+			@include md{
+				display: flex;
+				align-items: flex-end;
+				p:last-child{
+					padding-bottom: 0;
 				}
 			}
 		}
 	}
 
 	&_head {
+		padding-bottom: 64px;
+		@include xl {
+			padding-bottom: 52px;
+		}
+
 		h4 {
 			font-weight: 700;
 			font-size: 24px;
-			margin-bottom: 64px;
-
 			@include xl {
-				margin-bottom: 52px;
 				font-size: 22px;
 			}
 			@include sm {
@@ -336,25 +341,26 @@ SECTION GALLERY
 	&_desc {
 		p {
 			line-height: 120%;
-			margin-bottom: 32px;
+			padding-bottom: 32px;
 
 			@include sm {
-				margin-bottom: 24px;
-			}
+				padding-bottom: 24px;
+			}		
+			
 		}
 		p.no-padding {
-			margin-bottom: 0;
+			padding-bottom: 0;
 		}
 	}
 
 	&_more {
 		text-align: center;
-		margin-top: 67px;
+		padding-top: 67px;
 		@include xl {
-			margin-top: 68px;
+			padding-top: 68px;
 		}
 		@include sm {
-			margin-top: 92px;
+			padding-top: 97px;
 		}
 	}
 	.justify-adaptive {
@@ -450,13 +456,16 @@ SECTION CONTACTS
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .main-contacts {
 	padding-top: 74px;
+	margin-bottom: 116px;
 
 	@include xl {
 		padding-top: 30px;
+		margin-bottom: 133px;
 	}
 
 	@include sm {
 		padding-top: 38px;
+		margin-bottom: 68px;
 	}
 
 	.justify-adaptive {

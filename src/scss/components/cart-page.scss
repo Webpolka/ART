@@ -2,6 +2,15 @@
 CART PAGE
 --------------------------------------------------------------------------------------------------------------------------------*/
 .cart {
+	margin-bottom: 116px;
+
+	@include xl {
+		margin-bottom: 125px;
+	}
+	@include sm {
+		margin-bottom: 198px;
+	}
+
 	&_mytitle {
 		padding-top: 31px;
 		margin-bottom: 65px;
@@ -23,9 +32,10 @@ CART PAGE
 		justify-content: space-between;
 		gap: 26px;
 
-		padding-bottom: 64px;
+		margin-bottom: 69px;
 
 		@include sm {
+			gap: 28px;
 		}
 		.products-item {
 			display: flex;
@@ -159,103 +169,3 @@ CART PAGE
 		}
 	}
 }
-
-// .cart {
-// 	&_item {
-// 		display: flex;
-// 		flex-direction: column;
-// 		justify-content: space-between;
-// 		gap: 50px;
-
-// 		padding-bottom: 36px;
-// 		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-// 		@include xl {
-// 			gap: 39px;
-// 			padding-bottom: 31px;
-// 		}
-// 		@include sm {
-// 			gap: 36px;
-// 			padding-bottom: 30px;
-// 		}
-// 		&-item {
-// 			display: flex;
-
-// 			@include xl {
-// 			}
-// 			@include sm {
-// 			}
-
-// 			&_image {
-// 				width: 94px;
-// 				height: 93px;
-// 				justify-self: flex-start;
-// 				flex-shrink: 0;
-// 				@include xl {
-// 					width: 75px;
-// 					height: 75px;
-// 				}
-// 			}
-// 			&_content {
-// 				display: block;
-// 				flex-grow: 1;
-// 				padding-inline: 32px;
-// 				&:hover {
-// 					cursor: pointer;
-// 					h3,
-// 					p {
-// 						color: var(--color-hover);
-// 					}
-// 				}
-
-// 				@include xl {
-// 					padding-inline: 23px;
-// 				}
-
-// 				h3 {
-// 					font-family: var(--font-main);
-// 					font-weight: 400;
-// 					font-size: 16px;
-// 					line-height: 133%;
-// 					color: rgba(255, 255, 255, 0.87);
-// 					transition: all 0.3s ease-in-out;
-
-// 					@include xl {
-// 						font-size: 12px;
-// 					}
-// 				}
-
-// 				p {
-// 					font-style: italic;
-// 					font-weight: 400;
-// 					font-size: 14px;
-// 					color: rgba(255, 255, 255, 0.68);
-// 					transition: all 0.3s ease-in-out;
-
-// 					@include xl {
-// 						font-size: 10px;
-// 					}
-// 					padding-top: 3px;
-// 				}
-// 			}
-// 			&_price {
-// 				justify-self: flex-end;
-// 				text-align: right;
-
-// 				span {
-// 					position: relative;
-// 					top: -10px;
-// 					display: block;
-// 					font-family: var(--font-title);
-// 					font-weight: 400;
-// 					font-size: 24px;
-// 					line-height: 133%;
-// 					color: rgba(255, 255, 255, 0.87);
-// 					@include xl {
-// 						font-size: 18px;
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// }

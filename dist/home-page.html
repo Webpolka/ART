@@ -154,7 +154,7 @@
 </section>
 
 <!-- SECTION BOUTIQUE -->
-<section class="main-boutique" id="boutique">
+<section class="main-boutique">
 	<h2 class="visually-hidden">Boutique: enter the golden mystery</h2>
 	<div class="container">
 		<div class="row justify-content-center">
@@ -175,7 +175,7 @@
 			<div class="col-sm-5"><!-- Dolly --></div>
 		</div>
 
-		<div class="row justify-content-center">
+		<div class="row justify-content-center" id="boutique">
 			<div class="col-sm-5"><!-- Dolly --></div>
 			<div class="col-sm-5">
 				<div class="main-boutique_description">
@@ -274,7 +274,7 @@
 
 		<div class="row justify-content-center">
 			<div class="col-12 col-sm-10">
-				<div class="main-gallery_grid">
+				<div class="main-gallery_grid" id="main-gallery-grid">
 					<!-- 1 -->
 					<div class="item item-1">
 						<img class="img-responsive" src="./images/artist/artist-2-33.png" alt="Artist">
@@ -297,10 +297,12 @@
 						</div>
 
 						<div class="main-gallery_desc adaptive-bottom" id="main-transfer-desc">
-							<p class="no-padding">
-								No announcement had been made. No press release sent. The brand, known mostly in private whispers and by
-								those who seek rather than scroll, was never intended for mass recognition.
-							</p>
+							<div class="gallery-box" id="main-gallery-box">
+								<p class="no-padding">
+									No announcement had been made. No press release sent. The brand, known mostly in private whispers and by
+									those who seek rather than scroll, was never intended for mass recognition.
+								</p>
+							</div>
 						</div>
 					</div>
 					<!-- 4 -->
@@ -446,7 +448,8 @@
 				<div class="row justify-adaptive">
 					<div class="col-md-10 col-xl-8">
 						<div class="main-contacts_mytitle">
-							<span>Join our mailing list <br> for <i>updates</i> about</span>
+							<span>Join our mailing list <br>
+								for <i>updates</i> about</span>
 							<span class="right"> the boutique and</span>
 							<span class="right">projects</span>
 						</div>

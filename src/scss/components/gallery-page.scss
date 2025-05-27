@@ -2,6 +2,15 @@
 GALLERY
 ---------------------------------------------------------------------------------------------------------------------------*/
 .gallery {
+	margin-bottom: 116px;
+
+	@include xl {
+		margin-bottom: 159px;
+	}
+	@include sm {
+		margin-bottom: 128px;
+	}
+
 	&_mytitle {
 		text-align: center;
 
@@ -25,7 +34,7 @@ GALLERY
 	}
 
 	&-article {
-		margin-bottom: 297px;		
+		margin-bottom: 297px;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -64,7 +73,7 @@ GALLERY
 		h3 {
 			font-weight: 700;
 			line-height: 110%;
-			max-width: 90%;			
+			max-width: 90%;
 			@include md {
 				max-width: 100%;
 				margin-bottom: 109px;

@@ -80,27 +80,79 @@ SHOP PRODUCTS - ADAPTIVE TO 767px SHOW PAIR
 			}
 		}
 	}
-});
-/* --------------------------------------------------------------------------------------------------------------------------
+
+	/* --------------------------------------------------------------------------------------------------------------------------
 PAYMENT PLACEHOLDER
 -----------------------------------------------------------------------------------------------------------------------------*/
-const expireDate = document.getElementById("expiry-date");
-function updatePlaceholder() {
-	console.log('yyy');
-	
-	if (window.innerWidth <= 768) {
-		//  Пример ширины экрана для мобильных
-		expireDate.placeholder = "MM/YY";
-	} else {
-		expireDate.placeholder = ""; //  Удалить placeholder для десктопа
+	const expireDate = document.getElementById("expiry-date");
+	function updatePlaceholder() {
+		if (window.innerWidth < 768) {
+			//  Пример ширины экрана для мобильных
+			expireDate.placeholder = "MM/YY";
+		} else {
+			expireDate.placeholder = ""; //  Удалить placeholder для десктопа
+		}
 	}
-}
-//  Вызвать функцию при загрузке страницы и при изменении размера окна
-if (expireDate) {
-	window.onload = updatePlaceholder;
-	window.onresize = updatePlaceholder;
-}
+	//  Вызвать функцию при загрузке страницы и при изменении размера окна
+	if (expireDate) {
+		window.onload = updatePlaceholder;
+		window.onresize = updatePlaceholder;
+	}
 
-/* --------------------------------------------------------------------------------------------------------------------------
+	/* --------------------------------------------------------------------------------------------------------------------------
+MAIN PAGE - GALLERY SCROLL EQUILIBRIUM
+-----------------------------------------------------------------------------------------------------------------------------*/
+	const mainGalleryGrid = document.querySelector("#main-gallery-grid");
+	const galleryBox = document.querySelector("#main-gallery-box");
+
+	function updateGridHeight() {
+		if (window.innerWidth < 768) {
+			const item1height = getSumOfChildrenHeight(mainGalleryGrid.querySelector(".item-1"));
+			const item2height = getSumOfChildrenHeight(mainGalleryGrid.querySelector(".item-2"));
+			const item3height = getSumOfChildrenHeight(mainGalleryGrid.querySelector(".item-3"));
+			const item4height = getSumOfChildrenHeight(mainGalleryGrid.querySelector(".item-4"));
+			const finishHeight = max(item2height, item4height) + max(item1height, item3height) + 21;
+
+			if (item4height <= item2height) {
+				galleryBox.style.minHeight = item2height +  "px";
+			} else {
+				galleryBox.style.minHeight = item4height +  "px";
+			}
+
+			console.log("i1 - ", item1height, "i3 - ", item3height);
+			console.log("i4 - ", item4height, "i2 - ", item2height);
+			console.log(finishHeight);
+			mainGalleryGrid.style.maxHeight = finishHeight + "px";
+		} else {
+			mainGalleryGrid.style.removeProperty("max-height");
+			galleryBox.style.removeProperty('min-height');
+		}
+	}
+	if (mainGalleryGrid) {
+		window.onload = updateGridHeight;
+		window.onresize = updateGridHeight;
+	}
+
+	/* --------------------------------------------------------------------------------------------------------------------------
+EXTRA FUNCTIONS
+-----------------------------------------------------------------------------------------------------------------------------*/
+	function getSumOfChildrenHeight(parentElement) {
+		let sum = 0;
+		for (const child of parentElement.children) {
+			sum += child.offsetHeight;
+		}
+		return sum;
+	}
+
+	function max(a, b) {
+		if (a > b) {
+			return a;
+		} else {
+			return b;
+		}
+	}
+
+	/* --------------------------------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------------------------------*/
+});

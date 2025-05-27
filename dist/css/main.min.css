@@ -464,6 +464,19 @@ body {
 /* -------------------------------------------------------------------------------------------------------------------------
 404
 ---------------------------------------------------------------------------------------------------------------------------*/
+.page404 {
+  margin-bottom: 116px;
+}
+@media (max-width: 1200px) {
+  .page404 {
+    margin-bottom: 154px;
+  }
+}
+@media (max-width: 576px) {
+  .page404 {
+    margin-bottom: 93px;
+  }
+}
 .page404 .row {
   margin-top: 131px;
 }
@@ -516,13 +529,13 @@ body {
   }
 }
 .page404 .btn {
-  display: inline-block;
   margin-top: 16px;
   margin-left: 20px;
 }
 @media (max-width: 1200px) {
   .page404 .btn {
     margin-top: 43px;
+    margin-left: 0;
   }
 }
 .page404 .img-404 {
@@ -547,6 +560,19 @@ body {
 /*--------------------------------------------------------------------------------------------------------------------------------
 CART PAGE
 --------------------------------------------------------------------------------------------------------------------------------*/
+.cart {
+  margin-bottom: 116px;
+}
+@media (max-width: 1200px) {
+  .cart {
+    margin-bottom: 125px;
+  }
+}
+@media (max-width: 576px) {
+  .cart {
+    margin-bottom: 198px;
+  }
+}
 .cart_mytitle {
   padding-top: 31px;
   margin-bottom: 65px;
@@ -569,7 +595,12 @@ CART PAGE
   flex-direction: column;
   justify-content: space-between;
   gap: 26px;
-  padding-bottom: 64px;
+  margin-bottom: 69px;
+}
+@media (max-width: 576px) {
+  .cart-products {
+    gap: 28px;
+  }
 }
 .cart-products .products-item {
   display: flex;
@@ -773,11 +804,13 @@ BUTTONS
   border: 1px solid var(--color-white);
   color: var(--color-white);
   transition: all 0.3s ease-in-out;
-  min-width: 201px;
+  max-width: 201px;
+  width: 100%;
   height: 30px;
   display: inline-flex;
   align-items: center;
-  padding-inline: 56px;
+  justify-content: center;
+  text-transform: uppercase;
 }
 .btn span {
   font-weight: 400;
@@ -1162,7 +1195,9 @@ ACCORDION
 FOOTER
 ---------------------------------------------------------------------------------------------------------------------------------------*/
 .footer {
-  margin-top: 115px;
+  max-inline-size: 1440px;
+  width: 100%;
+  margin-inline: auto;
   min-height: 269px;
   background-image: url("../images/footer/desktop-footer.png");
   background-repeat: no-repeat;
@@ -1171,13 +1206,11 @@ FOOTER
 }
 @media (max-width: 1200px) {
   .footer {
-    margin-top: 138px;
     background-position: 50% 0;
   }
 }
 @media (max-width: 576px) {
   .footer {
-    margin-top: 108px;
     padding-top: 65px;
     padding-bottom: 77px;
     background-image: url("../images/footer/mobile-footer.png");
@@ -1283,6 +1316,19 @@ FOOTER
 /* -------------------------------------------------------------------------------------------------------------------------
 GALLERY
 ---------------------------------------------------------------------------------------------------------------------------*/
+.gallery {
+  margin-bottom: 116px;
+}
+@media (max-width: 1200px) {
+  .gallery {
+    margin-bottom: 159px;
+  }
+}
+@media (max-width: 576px) {
+  .gallery {
+    margin-bottom: 128px;
+  }
+}
 .gallery_mytitle {
   text-align: center;
   padding-top: 65px;
@@ -1925,20 +1971,15 @@ SECTION GALLERY
   .main-gallery_grid .item-3 {
     padding-left: 0;
   }
-  .main-gallery_grid .item-2,
-  .main-gallery_grid .item-4 {
+  .main-gallery_grid .item-2 img,
+  .main-gallery_grid .item-2 .gallery-box,
+  .main-gallery_grid .item-4 img,
+  .main-gallery_grid .item-4 .gallery-box {
     padding-top: 32px;
-  }
-}
-@media (max-width: 576px) {
-  .main-gallery_grid {
-    max-height: 660px;
-    overflow-y: auto;
   }
 }
 @media (max-width: 768px) {
   .main-gallery_grid .adaptive-bottom {
-    height: 100%;
     display: flex;
     align-items: flex-end;
   }
@@ -1947,18 +1988,30 @@ SECTION GALLERY
   .main-gallery_grid .adaptive-bottom {
     align-items: flex-start;
   }
-  .main-gallery_grid .adaptive-bottom p {
-    padding-top: 0;
+}
+@media (max-width: 768px) {
+  .main-gallery_grid .gallery-box {
+    display: flex;
+    align-items: flex-end;
+  }
+  .main-gallery_grid .gallery-box p:last-child {
+    padding-bottom: 0;
+  }
+}
+.main-gallery_head {
+  padding-bottom: 64px;
+}
+@media (max-width: 1200px) {
+  .main-gallery_head {
+    padding-bottom: 52px;
   }
 }
 .main-gallery_head h4 {
   font-weight: 700;
   font-size: 24px;
-  margin-bottom: 64px;
 }
 @media (max-width: 1200px) {
   .main-gallery_head h4 {
-    margin-bottom: 52px;
     font-size: 22px;
   }
 }
@@ -1969,28 +2022,28 @@ SECTION GALLERY
 }
 .main-gallery_desc p {
   line-height: 120%;
-  margin-bottom: 32px;
+  padding-bottom: 32px;
 }
 @media (max-width: 576px) {
   .main-gallery_desc p {
-    margin-bottom: 24px;
+    padding-bottom: 24px;
   }
 }
 .main-gallery_desc p.no-padding {
-  margin-bottom: 0;
+  padding-bottom: 0;
 }
 .main-gallery_more {
   text-align: center;
-  margin-top: 67px;
+  padding-top: 67px;
 }
 @media (max-width: 1200px) {
   .main-gallery_more {
-    margin-top: 68px;
+    padding-top: 68px;
   }
 }
 @media (max-width: 576px) {
   .main-gallery_more {
-    margin-top: 92px;
+    padding-top: 97px;
   }
 }
 .main-gallery .justify-adaptive {
@@ -2089,15 +2142,18 @@ SECTION CONTACTS
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .main-contacts {
   padding-top: 74px;
+  margin-bottom: 116px;
 }
 @media (max-width: 1200px) {
   .main-contacts {
     padding-top: 30px;
+    margin-bottom: 133px;
   }
 }
 @media (max-width: 576px) {
   .main-contacts {
     padding-top: 38px;
+    margin-bottom: 68px;
   }
 }
 .main-contacts .justify-adaptive {
@@ -2206,6 +2262,19 @@ SECTION CONTACTS
 /*-------------------------------------------------------------------------------------------------------------------------------------
 PAGE CONTAINER - FOR ALL PAGES FROM ADMIN
 --------------------------------------------------------------------------------------------------------------------------------------*/
+.page-container {
+  margin-bottom: 116px;
+}
+@media (max-width: 1200px) {
+  .page-container {
+    margin-bottom: 121px;
+  }
+}
+@media (max-width: 576px) {
+  .page-container {
+    margin-bottom: 103px;
+  }
+}
 .page-container h1,
 .page-container h2 {
   text-align: center;
@@ -2231,18 +2300,19 @@ PAGE CONTAINER - FOR ALL PAGES FROM ADMIN
 PAYMENT PAGE
 ---------------------------------------------------------------------------------------------------------------------------*/
 .payment {
+  margin-bottom: 116px;
   /*--------------------------------------------------------------------------------------------------------------------------------
       PAYMENT PAGE - ORDER BLOCK
       -------------------------------------------------------------------------------------------------------------------------------*/
 }
 @media (max-width: 1200px) {
   .payment {
-    margin-bottom: -10px;
+    margin-bottom: 129px;
   }
 }
 @media (max-width: 576px) {
   .payment {
-    margin-bottom: 0;
+    margin-bottom: 113px;
   }
 }
 .payment_mytitle {
@@ -2620,6 +2690,203 @@ PAYMENT PAGE
   }
 }
 
+/* -------------------------------------------------------------------------------------------------------------------------
+ PRODUCT PAGE
+---------------------------------------------------------------------------------------------------------------------------*/
+.product-toprow {
+  padding-top: 31px;
+  margin-bottom: 156px;
+}
+@media (max-width: 1200px) {
+  .product-toprow {
+    margin-bottom: 150px;
+  }
+}
+@media (max-width: 576px) {
+  .product-toprow {
+    margin-bottom: 142px;
+  }
+}
+@media (max-width: 1200px) {
+  .product-gallery {
+    transform: translateX(8px);
+  }
+}
+@media (max-width: 576px) {
+  .product-gallery {
+    transform: translateX(0);
+    padding-inline: 17px;
+  }
+}
+.product-gallery_title {
+  display: none;
+  padding-top: 64px;
+  margin-bottom: 48px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  text-align: center;
+}
+@media (max-width: 576px) {
+  .product-gallery_title {
+    display: block;
+  }
+}
+.product-gallery__main-image {
+  max-width: 460px;
+  max-height: 457px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+@media (max-width: 1200px) {
+  .product-gallery__main-image {
+    max-width: 376px;
+    max-height: 373px;
+  }
+}
+@media (max-width: 576px) {
+  .product-gallery__main-image {
+    max-width: 100%;
+    max-height: auto;
+  }
+}
+.product-gallery__main-image a {
+  display: block;
+}
+.product-gallery__thumbnails {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+@media (max-width: 576px) {
+  .product-gallery__thumbnails {
+    gap: 20px;
+  }
+}
+.product-gallery__thumbnails a {
+  display: block;
+  max-width: 95px;
+  max-height: 95px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+.product-gallery__thumbnails a:hover {
+  transform: scale(1.05);
+}
+.product-info {
+  transform: translateX(32px);
+}
+@media (max-width: 1200px) {
+  .product-info {
+    transform: translateX(16px);
+  }
+}
+@media (max-width: 576px) {
+  .product-info {
+    transform: translateX(0);
+  }
+}
+.product-info_title {
+  display: block;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  text-align: center;
+  margin-bottom: 65px;
+}
+@media (max-width: 1200px) {
+  .product-info_title {
+    font-size: 34px;
+    margin-bottom: 56px;
+  }
+}
+@media (max-width: 576px) {
+  .product-info_title {
+    display: none;
+  }
+}
+.product-info_description {
+  margin-bottom: 65px;
+}
+@media (max-width: 1200px) {
+  .product-info_description {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 576px) {
+  .product-info_description {
+    padding-top: 88px;
+    margin-bottom: 55px;
+  }
+}
+.product-info_list {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 50px;
+}
+@media (max-width: 1200px) {
+  .product-info_list {
+    margin-bottom: 55px;
+  }
+}
+@media (max-width: 576px) {
+  .product-info_list {
+    gap: 30px;
+    margin-bottom: 41px;
+  }
+}
+.product-info_list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+}
+.product-info_list li img {
+  width: 33px;
+  height: 33px;
+}
+@media (max-width: 1200px) {
+  .product-info_list li img {
+    width: 28px;
+    height: 28px;
+  }
+}
+.product-info_addcart {
+  padding-left: 17px;
+}
+@media (max-width: 1200px) {
+  .product-info_addcart {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+.product_products {
+  margin-bottom: 115px;
+}
+@media (max-width: 1200px) {
+  .product_products {
+    margin-bottom: 125px;
+  }
+}
+@media (max-width: 576px) {
+  .product_products {
+    margin-bottom: 94px;
+  }
+}
+.product_products .products-title {
+  margin-bottom: 64px;
+}
+@media (max-width: 576px) {
+  .product_products .products-title {
+    margin-bottom: 36px;
+  }
+}
+
 /*-------------------------------------------------------------------------------------------------------------------------------------
 SECTION SHOP - LABEL
 --------------------------------------------------------------------------------------------------------------------------------------*/
@@ -2721,6 +2988,19 @@ SECTION SHOP - LABEL
 /*-------------------------------------------------------------------------------------------------------------------------------------
 SECTION SHOP - PRODUCTS
 --------------------------------------------------------------------------------------------------------------------------------------*/
+.shop-products {
+  margin-bottom: 116px;
+}
+@media (max-width: 1200px) {
+  .shop-products {
+    margin-bottom: 138px;
+  }
+}
+@media (max-width: 576px) {
+  .shop-products {
+    margin-bottom: 94px;
+  }
+}
 .shop-products_filter {
   display: flex;
   align-items: center;
@@ -2754,6 +3034,19 @@ SECTION SHOP - PRODUCTS
 /* -------------------------------------------------------------------------------------------------------------------------
 THANKS PAGE
 ---------------------------------------------------------------------------------------------------------------------------*/
+.thank {
+  margin-bottom: 116px;
+}
+@media (max-width: 1200px) {
+  .thank {
+    margin-bottom: 121px;
+  }
+}
+@media (max-width: 576px) {
+  .thank {
+    margin-bottom: 103px;
+  }
+}
 .thank_mytitle {
   padding-top: 119px;
   margin-bottom: 63px;
