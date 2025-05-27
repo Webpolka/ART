@@ -60,8 +60,7 @@ BUTTONS
 
 	span {
 		font-weight: 400;
-		font-size: 14px;
-		line-height: 133%;
+		font-size: 14px;		
 		text-transform: uppercase;
 		color: var(--color-white);
 		transition: all 0.3s ease-in-out;
@@ -370,7 +369,8 @@ PRODUCT CARD
 				font-size: 20px;
 			}
 
-			padding-top: 3px;
+			padding-top: 6px;
+			padding-bottom: 4px;
 		}
 	}
 }
@@ -416,6 +416,7 @@ ACCORDION
 	margin-block: 0;
 	overflow: hidden;
 	transition: all 0.3s linear;
+	// padding-bottom: 32px;
 	p {
 		padding-right: 30px;
 	}

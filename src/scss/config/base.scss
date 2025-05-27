@@ -45,6 +45,11 @@ body {
 	}
 }
 
+.up-index {
+	position: relative;
+	z-index: 2;
+}
+
 .no-scroll {
 	overflow: hidden;
 }
@@ -101,10 +106,10 @@ body {
 	overflow: hidden;
 }
 
-.padding-inline{
+.padding-inline {
 	width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .bred {
@@ -114,4 +119,3 @@ body {
 .gred {
 	border: 1px solid green;
 }
-

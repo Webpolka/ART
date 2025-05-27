@@ -1,0 +1,174 @@
+/*-------------------------------------------------------------------------------------------------------------------------------------
+SUN SPOTS
+--------------------------------------------------------------------------------------------------------------------------------------*/
+.main-anounce {
+	position: relative;
+	@include xl {
+		&_sm-blackspot {
+			position: absolute;
+			background-color: rgb(2, 2, 2);
+			border-radius: 50%;
+			width: 900px;
+			height: 457px;
+			filter: blur(40px);
+			transform: rotate(-7deg);
+			top: 29%;
+			left: -21%;
+			z-index: 0;
+		}
+	}
+	@include sm {
+		&_sm-blackspot {
+			width: 434px;
+			height: 585px;
+
+			filter: blur(100px);
+			transform: rotate(27deg);
+
+			top: 20%;
+			left: -85%;
+		}
+	}
+}
+
+.main-about {
+	position: relative;
+	@include sm {
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, var(--color-spot-bg) 100%);
+	}
+
+	&_sunspot {
+		position: absolute;
+		background-color: var(--color-spot);
+		border-radius: 50%;
+		width: 154px;
+		height: 424px;
+
+		filter: blur(140px);
+		transform: rotate(40deg);
+		opacity: 0.82;
+		top: -14%;
+		left: 20%;
+		z-index: 0;
+
+		@include xl {
+			width: 171px;
+			height: 400px;
+			top: -3%;
+			left: 11%;
+		}
+		@include sm {
+			width: 134px;
+			height: 314px;
+			top: -3%;
+			left: 9%;
+			filter: blur(110px);
+		}
+	}
+}
+
+.main-boutique {
+	position: relative;
+	@include sm {
+		background: var(--color-spot-bg);
+	}
+	&_sunspot {
+		position: absolute;
+		background-color: var(--color-spot);
+		border-radius: 50%;
+		width: 229px;
+		height: 629px;
+
+		filter: blur(80px);
+		transform: rotate(40deg);
+		opacity: 0.5;
+
+		top: 20%;
+		right: 40%;
+		z-index: 0;
+		@include xl {
+			right: 35%;
+		}
+
+		@include sm {
+			top: 0%;
+			right: 30%;
+			opacity: 0.94;
+			filter: blur(120px);
+		}
+	}
+}
+
+.main-gallery {
+	position: relative;
+	@include sm {
+		background: var(--color-spot-bg);
+	}
+	&_spot {
+		position: absolute;
+		background-color: var(--color-spot);
+		border-radius: 50%;
+
+		width: 154px;
+		height: 434px;
+		filter: blur(100px);
+		transform: rotate(40deg);
+		opacity: 0.68;
+		top: 34%;
+		right: 28%;
+		z-index: 0;
+
+		@include xl {
+			width: 128px;
+			height: 361px;
+			top: 37%;
+			right: 17%;
+			filter: blur(90px);
+		}
+
+		@include sm {
+			top: 36%;
+		}
+	}
+}
+
+.main-faq {
+	position: relative;
+	@include sm {
+		background: var(--color-spot-bg);
+	}
+	&_spot {
+		position: absolute;
+		background-color: var(--color-spot);
+		border-radius: 50%;
+
+		width: 229px;
+		height: 539px;
+
+		filter: blur(110px);
+		transform: rotate(40deg);
+		opacity: 0.56;
+		top: 7%;
+		right: 41%;
+		z-index: 0;
+
+		@include xl {
+			width: 209px;
+			height: 492px;
+			right: 49%;
+		}
+
+		@include sm {
+			width: 149px;
+			height: 351px;
+			top: 24%;
+			right: 30%;
+			filter: blur(100px);
+		}
+	}
+}
+.main-contacts {
+	@include sm {
+		background: var(--color-spot-bg);
+	}
+}

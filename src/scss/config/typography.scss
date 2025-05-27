@@ -19,6 +19,9 @@ h6 {
 	@include xl {
 		font-size: 36px;
 	}
+	@include sm{
+		line-height: 144%;
+	}
 }
 
 p {
