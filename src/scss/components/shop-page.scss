@@ -1,19 +1,29 @@
 /*-------------------------------------------------------------------------------------------------------------------------------------
 SECTION SHOP - LABEL
 --------------------------------------------------------------------------------------------------------------------------------------*/
+.shop-padding-inline {
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
 
+	padding-bottom: 95px;
+
+	@include xl{
+		padding-bottom: 75px;
+	}
+	@include sm{
+		padding-bottom: 84px;
+	}
+}
 .shop-label {
 	position: relative;
-	margin-inline: auto;
-
-	margin-bottom: 95px;
+	margin-inline: auto;	
 
 	@include xxl {
 		max-inline-size: 1200px;
 		height: 540px;
 	}
-	@include xl {
-		margin-bottom: 75px;
+	@include xl {		
 		max-inline-size: 962px;
 		height: 433px;
 
@@ -21,13 +31,16 @@ SECTION SHOP - LABEL
 		flex-direction: column;
 		justify-content: flex-end;
 
+		margin-top: 32px;
 		padding-bottom: 62px;
 	}
-	@include sm {
-		margin-bottom: 84px;
+	@include sm {		
 
 		max-inline-size: 410px;
 		height: 571px;
+
+		margin-top: 0px;
+		padding-bottom: 42px;
 	}
 
 	&_image-desktop,
@@ -74,19 +87,37 @@ SECTION SHOP - LABEL
 	}
 
 	&_title {
-		display: none;
+		font-family: var(--font-title);
+		padding-top: 360px;
+		color: var(--color-white);
+
+		.adaptive-padding-left {
+			padding-left: 50px;
+			@include xl{
+				padding-left: 20px;
+			}
+			@include sm {
+				padding-left: 36px;
+			}
+		}
+
+		span {
+			font-weight: 400;
+			font-size: 40px;
+			line-height: 97%;
+		}
 
 		@include xl {
-			display: block;
 			span {
-				font-weight: 500;
+				font-weight: 400;
 				font-size: 60px;
-				line-height: 97%;
+				line-height: 88%;
 			}
 		}
 		@include md {
 			span {
 				font-size: 40px;
+				line-height: 100%;
 			}
 		}
 
@@ -102,12 +133,12 @@ SECTION SHOP - LABEL
 SECTION SHOP - PRODUCTS
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .shop-products {
-	margin-bottom: 116px;
+	padding-bottom: 116px;
 	@include xl {
-		margin-bottom: 138px;
+		padding-bottom: 138px;
 	}
-	@include sm {
-		margin-bottom: 94px;
+	@include sm {		
+		padding-bottom: 56px;
 	}
 
 	// Filter elemenet

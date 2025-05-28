@@ -2,13 +2,13 @@
 CART PAGE
 --------------------------------------------------------------------------------------------------------------------------------*/
 .cart {
-	margin-bottom: 116px;
+	padding-bottom: 116px;
 
 	@include xl {
-		margin-bottom: 125px;
+		padding-bottom: 125px;
 	}
 	@include sm {
-		margin-bottom: 198px;
+		padding-bottom: 198px;
 	}
 
 	&_mytitle {
@@ -44,6 +44,8 @@ CART PAGE
 
 			@include sm {
 				padding-right: 21px;
+				padding-top: 19px;
+				padding-bottom: 19px;
 			}
 
 			&_image {
@@ -74,14 +76,7 @@ CART PAGE
 				padding-inline: 30px;
 				@include xl {
 					padding-inline: 25px;
-				}
-				&:hover {
-					cursor: pointer;
-					h3,
-					p {
-						color: var(--color-hover);
-					}
-				}
+				}				
 
 				@include xl {
 					padding-inline: 23px;
@@ -92,7 +87,7 @@ CART PAGE
 					font-weight: 400;
 					font-size: 16px;
 					line-height: 133%;
-					color: rgba(255, 255, 255, 0.87);
+					color: var(--color-white-gr);
 					transition: all 0.3s ease-in-out;
 
 					@include xl {
@@ -107,7 +102,7 @@ CART PAGE
 					font-style: italic;
 					font-weight: 400;
 					font-size: 14px;
-					color: rgba(255, 255, 255, 0.68);
+					color: var(--color-white-gr);
 					transition: all 0.3s ease-in-out;
 
 					@include xl {
@@ -136,7 +131,7 @@ CART PAGE
 					font-weight: 400;
 					font-size: 24px;
 					line-height: 133%;
-					color: rgba(255, 255, 255, 0.87);
+					color: var(--color-white-gr);
 					@include xl {
 						font-size: 22px;
 					}
@@ -149,15 +144,15 @@ CART PAGE
 					font-size: 12px;
 					line-height: 133%;
 					text-transform: uppercase;
-					color: rgba(255, 255, 255, 0.6);
+					color: var(--color-white-gr);
 					transition: all 0.3s ease-in-out;
 
 					@include xl {
 						font-size: 10px;
 					}
-					&:hover {
-						color: var(--color-hover);
-					}
+					// &:hover {
+					// 	color: var(--color-hover);
+					// }
 				}
 			}
 		}

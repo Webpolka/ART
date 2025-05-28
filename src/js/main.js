@@ -21,11 +21,24 @@ BURGER MENU CODE
 
 	if (burgerBtn && mobileNav) {
 		burgerBtn.addEventListener("click", () => {
+			const mobileTile = mobileNav.querySelector(".mobile-tile");
+			mobileTile.scrollTo({top: mobileTile.scrollHeight});
+			setTimeout(function () {
+				mobileTile.scrollTo({
+					top: 0,
+					behavior: "smooth",
+				});
+			}, 1000);
 			mobileNav.classList.toggle("show");
 			body.classList.toggle("no-scroll");
 		});
 
 		mobileNav.addEventListener("click", () => {
+			const mobileTile = mobileNav.querySelector(".mobile-tile");
+			mobileTile.scrollTo({
+				top: mobileTile.scrollHeight,
+				behavior: "smooth",
+			});
 			mobileNav.classList.remove("show");
 			body.classList.remove("no-scroll");
 		});
@@ -36,6 +49,7 @@ BURGER MENU CODE
 	/* --------------------------------------------------------------------------------------------------------------------------
 ACCORDION
 -----------------------------------------------------------------------------------------------------------------------------*/
+
 	new Accordion({
 		accordion: ".accordion",
 		button: ".accordion-btn",
@@ -69,6 +83,7 @@ SHOP PRODUCTS - ADAPTIVE TO 767px SHOW PAIR
 		const allProducts = shopProducts.querySelectorAll(".product-card");
 		const mediaSM = window.matchMedia("(max-width: 765px)");
 
+		remove();
 		window.addEventListener("resize", remove);
 		function remove() {
 			if (mediaSM.matches) {
@@ -114,18 +129,18 @@ MAIN PAGE - GALLERY SCROLL EQUILIBRIUM
 			const finishHeight = max(item2height, item4height) + max(item1height, item3height) + 21;
 
 			if (item4height <= item2height) {
-				galleryBox.style.minHeight = item2height +  "px";
+				galleryBox.style.minHeight = item2height + "px";
 			} else {
-				galleryBox.style.minHeight = item4height +  "px";
+				galleryBox.style.minHeight = item4height + "px";
 			}
 
-			console.log("i1 - ", item1height, "i3 - ", item3height);
-			console.log("i4 - ", item4height, "i2 - ", item2height);
-			console.log(finishHeight);
+			// console.log("i1 - ", item1height, "i3 - ", item3height);
+			// console.log("i4 - ", item4height, "i2 - ", item2height);
+			// console.log(finishHeight);
 			mainGalleryGrid.style.maxHeight = finishHeight + "px";
 		} else {
 			mainGalleryGrid.style.removeProperty("max-height");
-			galleryBox.style.removeProperty('min-height');
+			galleryBox.style.removeProperty("min-height");
 		}
 	}
 	if (mainGalleryGrid) {
@@ -153,6 +168,27 @@ EXTRA FUNCTIONS
 	}
 
 	/* --------------------------------------------------------------------------------------------------------------------------
-
+GALLERY FIRST ARTICLE EXTRA CLASSES
 -----------------------------------------------------------------------------------------------------------------------------*/
+
+	const galleryPage = document.querySelector("#gallery-page");
+	if (galleryPage) {
+		const firstGalleryArticle = galleryPage.querySelector(".gallery-article");
+		const firstGalleryArticleDate = firstGalleryArticle.querySelector(".gallery-article_date");
+		const firstGalleryArticleTitle = firstGalleryArticle.querySelector(".gallery-article_title");
+
+		if (firstGalleryArticle && firstGalleryArticleDate && firstGalleryArticleTitle) {
+			firstGalleryArticleDate.classList.add("first-gallery_date");
+			firstGalleryArticleTitle.classList.add("first-gallery_title");
+		}
+	}
+
+	/* --------------------------------------------------------------------------------------------------------------------------
+BLACK HEADER WHEN HOME PAGE
+-----------------------------------------------------------------------------------------------------------------------------*/
+	const mainAnounce = document.querySelector(".main-anounce");
+	const header = document.querySelector(".header");
+	if (mainAnounce) {
+		header.classList.add("header-black");
+	}
 });

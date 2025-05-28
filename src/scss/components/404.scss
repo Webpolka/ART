@@ -2,20 +2,20 @@
 404
 ---------------------------------------------------------------------------------------------------------------------------*/
 .page404 {
-	margin-bottom: 116px;
+	padding-bottom: 116px;
 	@include xl {
-		margin-bottom: 154px;
+		padding-bottom: 154px;
 	}
 	@include sm {
-		margin-bottom: 93px;
+		padding-bottom: 93px;
 	}
 	.row {
-		margin-top: 131px;
+		padding-top: 131px;
 		@include xl {
-			margin-top: 95px;
+			padding-top: 95px;
 		}
 		@include sm {
-			margin-top: 125px;
+			padding-top: 125px;
 		}
 	}
 	p {

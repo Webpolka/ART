@@ -2,20 +2,20 @@
 GALLERY
 ---------------------------------------------------------------------------------------------------------------------------*/
 .gallery {
-	margin-bottom: 116px;
+	padding-bottom: 116px;
 
 	@include xl {
-		margin-bottom: 159px;
+		padding-bottom: 159px;
 	}
 	@include sm {
-		margin-bottom: 128px;
+		padding-bottom: 128px;
 	}
 
 	&_mytitle {
 		text-align: center;
 
-		padding-top: 65px;
-		margin-bottom: 83px;
+		padding-top: 42px;
+		margin-bottom: 78px;
 
 		@include xl {
 			text-align: center;
@@ -55,13 +55,13 @@ GALLERY
 
 			@include xl {
 				margin-bottom: 27px;
-				&.first-date {
+				&.first-gallery_date {
 					margin-bottom: 42px !important;
 				}
 			}
 			@include sm {
 				margin-bottom: 36px;
-				&.first-date {
+				&.first-gallery_date {
 					margin-bottom: 60px !important;
 					p {
 						font-size: 14px;
@@ -76,7 +76,12 @@ GALLERY
 			max-width: 90%;
 			@include md {
 				max-width: 100%;
-				margin-bottom: 109px;
+				margin-bottom: 100px;
+			}
+		}
+		h3.first-gallery_title {
+			@include md {
+				margin-bottom: 50px;
 			}
 		}
 
@@ -102,6 +107,27 @@ GALLERY
 				width: 68%;
 				@include xl {
 					width: 65%;
+				}
+				@include sm {
+					width: 100%;
+				}
+			}
+
+			.column-30 {
+				width: 32%;
+				padding-inline: 10px;
+
+				@include xl {
+					width: 30%;
+				}
+				@include sm {
+					width: 100%;
+				}
+			}
+			.column-70 {
+				width: 68%;
+				@include xl {
+					width: 70%;
 				}
 				@include sm {
 					width: 100%;

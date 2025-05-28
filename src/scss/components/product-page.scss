@@ -4,13 +4,15 @@
 
 .product {
 	&-toprow {
-		padding-top: 31px;
+		padding-top: 40px;
 		margin-bottom: 156px;
 
 		@include xl {
+			padding-top: 56px;
 			margin-bottom: 150px;
 		}
 		@include sm {
+			padding-top: 31px;
 			margin-bottom: 142px;
 		}
 	}
@@ -19,7 +21,7 @@
 		@include xl {
 			transform: translateX(8px);
 		}
-		@include sm{
+		@include sm {
 			transform: translateX(0);
 			padding-inline: 17px;
 		}
@@ -32,18 +34,15 @@
 			font-size: 36px;
 			line-height: 120%;
 
-			text-align: center;		
-			
+			text-align: center;
+
 			@include sm {
+				padding-top: 59px;
 				display: block;
 			}
-
 		}
 
-
 		&__main-image {
-			
-
 			max-width: 460px;
 			max-height: 457px;
 			width: 100%;
@@ -55,11 +54,11 @@
 				max-width: 376px;
 				max-height: 373px;
 			}
-			@include sm{
+			@include sm {
 				max-width: 100%;
 				max-height: auto;
 			}
-					
+
 			a {
 				display: block;
 			}
@@ -70,8 +69,8 @@
 			flex-wrap: wrap;
 			gap: 16px;
 
-			@include sm{
-				gap:20px;
+			@include sm {
+				gap: 20px;
 			}
 
 			a {
@@ -98,7 +97,7 @@
 		@include xl {
 			transform: translateX(16px);
 		}
-		@include sm{
+		@include sm {
 			transform: translateX(0);
 		}
 
@@ -123,7 +122,7 @@
 		&_description {
 			margin-bottom: 65px;
 			@include xl {
-					margin-bottom: 32px;
+				margin-bottom: 32px;
 			}
 			@include sm {
 				padding-top: 88px;
@@ -138,11 +137,11 @@
 
 			margin-bottom: 50px;
 			@include xl {
+				gap: 30px;
 				margin-bottom: 55px;
 			}
 			@include sm {
-				gap: 30px;
-				margin-bottom: 41px;
+				margin-bottom: 37px;
 			}
 
 			li {
@@ -168,7 +167,7 @@
 		}
 		&_addcart {
 			padding-left: 17px;
-			@include xl{
+			@include xl {
 				padding-left: 0;
 				text-align: center;
 			}
@@ -177,17 +176,44 @@
 
 	&_products {
 		margin-bottom: 115px;
-		@include xl{
+		@include xl {
 			margin-bottom: 125px;
 		}
-		@include sm{
+		@include sm {
 			margin-bottom: 94px;
 		}
 
 		.products-title {
-			margin-bottom: 64px;			
+			margin-bottom: 64px;
 			@include sm {
 				margin-bottom: 36px;
+			}
+		}
+
+		// EXTRA 4 COLUMNS PRODUCTS STYLES
+		.product-card_title h3 {
+			font-size: 13px;
+			@include xl {
+				font-size: 12px;
+			}
+			@include sm {
+			}
+		}
+		.product-card_desc p {
+			font-size: 12px;
+			@include xl {
+				font-size: 10px;
+			}
+		}
+		.product-card_price span {
+			font-size: 20px;
+			@include xl {
+				padding-top: 0px;
+				padding-bottom: 0px;
+			}
+			@include sm {
+				padding-top: 6px;
+				padding-bottom: 4px;
 			}
 		}
 	}

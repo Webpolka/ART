@@ -31,7 +31,7 @@ SECTION ANOUNCE
 	&_image-tablet,
 	&_image-mobile {
 		position: absolute;
-		z-index: -1;
+		z-index: 0;
 		top: 0;
 		left: 0;
 		right: 0;
@@ -78,6 +78,7 @@ SECTION ANOUNCE
 			font-weight: 700;
 			font-size: 150px;
 			line-height: 78%;
+			color: var(--color-white);
 
 			@include xl {
 				line-height: 90%;
@@ -208,12 +209,15 @@ SECTION BOUTIQUE
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .main-boutique {
 	padding-top: 12px;
+	padding-bottom: 130px;
 
 	@include xl {
 		padding-top: 15px;
+		padding-bottom: 130px;
 	}
 	@include sm {
 		padding-top: 15px;
+		padding-bottom: 150px;
 	}
 
 	&_description {
@@ -253,16 +257,16 @@ SECTION BOUTIQUE
 SECTION GALLERY
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .main-gallery {
-	padding-top: 167px;
+	padding-top: 37px;
 	padding-bottom: 120px;
 
 	@include xl {
-		padding-top: 161px;
+		padding-top: 31px;
 		padding-bottom: 110px;
 	}
 
 	@include sm {
-		padding-top: 184px;
+		padding-top: 34px;
 		padding-bottom: 100px;
 	}
 
@@ -589,6 +593,8 @@ SECTION CONTACTS
 			font-size: 22px;
 			line-height: 133%;
 			margin-bottom: 12px;
+			color: var(--color-white);
+
 			span {
 				font-family: var(--font-main);
 				font-weight: 400;

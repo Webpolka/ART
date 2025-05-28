@@ -9,6 +9,7 @@ h4,
 h5,
 h6 {
 	font-family: var(--font-title);
+	color: var(--color-white);
 }
 
 [class*="_mytitle"] {
@@ -16,6 +17,7 @@ h6 {
 	font-weight: 600;
 	font-size: 40px;
 	line-height: 120%;
+	color: var(--color-white);
 	@include xl {
 		font-size: 36px;
 	}
@@ -28,6 +30,7 @@ p {
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 133%;
+	color: var(--color-white-gr);
 	@include xl {
 		font-size: 12px;
 	}

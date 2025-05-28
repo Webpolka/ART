@@ -1,38 +1,45 @@
 /* -------------------------------------------------------------------------------------------------------------------------
-THANKS PAGE
+CONFORMATION PAGE
 ---------------------------------------------------------------------------------------------------------------------------*/
-.thank {
-	margin-bottom: 116px;
-	@include xl{
-		margin-bottom: 121px;
+.conformation {
+	padding-bottom: 116px;
+	@include xl {
+		padding-bottom: 121px;
 	}
-	@include sm{
-		margin-bottom: 103px;
+	@include sm {
+		padding-bottom: 103px;
 	}
 
 	&_mytitle {
 		padding-top: 119px;
-		margin-bottom: 63px;
+		margin-bottom: 75px;
+
+		font-size: 48px;
+
+		color: var(--color-white);
 
 		@include xl {
+			font-size: 40px;
 			padding-top: 99px;
 			margin-bottom: 61px;
 		}
 		@include sm {
-			padding-top: 83px;
-			margin-bottom: 69px;
+			line-height: 122%;
+			padding-top: 71px;
+			margin-bottom: 88px;
 
-			display: flex;		
-			width: 100%;
+			display: flex;
+			width: 100%;		
 
 			span {
 				width: 100%;
 				max-width: 284px;
 				display: block;
-				text-align: left;				
+				text-align: left;
 			}
 			.sm-right {
 				text-align: right;
+				margin-left: 30px;
 				width: 100%;
 			}
 		}
@@ -91,7 +98,7 @@ THANKS PAGE
 				@include sm {
 					padding-left: 64px;
 				}
-				@media (max-width:375px) {
+				@media (max-width: 375px) {
 					padding-left: 36px;
 				}
 			}
@@ -114,7 +121,7 @@ THANKS PAGE
 		}
 
 		@include sm {
-			padding-top: 99px;
+			padding-top: 136px;
 			margin-bottom: -16px;
 		}
 
@@ -135,6 +142,32 @@ THANKS PAGE
 			}
 			@include sm {
 				padding: 16px;
+			}
+		}
+		// EXTRA 4 COLUMNS PRODUCTS STYLES
+		.product-card_title h3 {
+			font-size: 13px;
+			@include xl {
+				font-size: 12px;
+			}
+			@include sm {
+			}
+		}
+		.product-card_desc p {
+			font-size: 12px;
+			@include xl {
+				font-size: 10px;
+			}
+		}
+		.product-card_price span {
+			font-size: 20px;
+			@include xl {
+				padding-top: 0px;
+				padding-bottom: 0px;
+			}
+			@include sm {
+				padding-top: 6px;
+				padding-bottom: 4px;
 			}
 		}
 	}

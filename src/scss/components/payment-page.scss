@@ -2,26 +2,27 @@
 PAYMENT PAGE
 ---------------------------------------------------------------------------------------------------------------------------*/
 .payment {
-	margin-bottom: 116px;
+	padding-bottom: 116px;
 	@include xl {
-		margin-bottom: 129px;
+		padding-bottom: 129px;
 	}
 	@include sm {
-		margin-bottom: 113px;
+		padding-bottom: 113px;
 	}
 
 	&_mytitle {
-		padding-top: 31px;
+		padding-top: 40px;
 		margin-bottom: 59px;
 		text-align: center;
+				
 
 		@include xl {
 			padding-top: 41px;
-			margin-bottom: 58px;
+			margin-bottom: 50px;
 		}
 		@include sm {
-			padding-top: 77px;
-			margin-bottom: 68px;
+			padding-top: 88px;
+			margin-bottom: 74px;
 		}
 	}
 
@@ -32,7 +33,10 @@ PAYMENT PAGE
 		&-item {
 			margin-bottom: 64px;
 			&.margin-bottom-last {
-				margin-bottom: 42px;
+				margin-bottom: 64px;
+				@include xl {
+					margin-bottom: 43px;
+				}
 				@include md {
 					margin-bottom: 68px;
 				}
@@ -58,13 +62,13 @@ PAYMENT PAGE
 
 				&.full-block {
 					display: block;
-					padding-top: 22px;
-					margin-bottom: 10px;
+					padding-top: 19px;
+					margin-bottom: 7px;
 					@include xl {
 						padding-top: 26px;
 					}
 					@include sm {
-						padding-top: 20px;
+						padding-top: 26px;
 					}
 				}
 				&.small-top-padding {
@@ -93,14 +97,14 @@ PAYMENT PAGE
 		}
 		.information-padding {
 			@include sm {
-				padding-top: 22px;
+				padding-top: 33px;
 			}
 		}
 
 		.billing-padding {
 			padding-left: 15px;
 			@include sm {
-				padding-top: 7px;
+				padding-top: 23px;
 				padding-left: 0;
 			}
 		}
@@ -194,7 +198,7 @@ PAYMENT PAGE
 			margin-bottom: 85px;
 		}
 		@include sm {
-			padding: 25px 43px 25px 28px;
+			padding: 30px 43px 30px 28px;
 		}
 
 		h4 {
@@ -205,8 +209,8 @@ PAYMENT PAGE
 				margin-bottom: 31px;
 			}
 			@include sm {
-				padding-top: 0;
-				margin-bottom: 22px;
+				padding-top: 0px;
+				margin-bottom: 26px;
 			}
 		}
 
@@ -248,14 +252,7 @@ PAYMENT PAGE
 				&_content {
 					display: block;
 					flex-grow: 1;
-					padding-inline: 32px;
-					&:hover {
-						cursor: pointer;
-						h3,
-						p {
-							color: var(--color-hover);
-						}
-					}
+					padding-inline: 32px;					
 
 					@include xl {
 						padding-inline: 23px;
@@ -266,7 +263,7 @@ PAYMENT PAGE
 						font-weight: 400;
 						font-size: 16px;
 						line-height: 133%;
-						color: rgba(255, 255, 255, 0.87);
+						color: var(--color-white-gr);
 						transition: all 0.3s ease-in-out;
 
 						@include xl {
@@ -278,7 +275,7 @@ PAYMENT PAGE
 						font-style: italic;
 						font-weight: 400;
 						font-size: 14px;
-						color: rgba(255, 255, 255, 0.68);
+						color: var(--color-white-gr);
 						transition: all 0.3s ease-in-out;
 
 						@include xl {
@@ -299,7 +296,7 @@ PAYMENT PAGE
 						font-weight: 400;
 						font-size: 24px;
 						line-height: 133%;
-						color: rgba(255, 255, 255, 0.87);
+						color: var(--color-white-gr);
 						@include xl {
 							font-size: 18px;
 						}
@@ -318,7 +315,7 @@ PAYMENT PAGE
 			}
 
 			@include sm {
-				padding-top: 32px;
+				padding-top: 40px;
 				margin-bottom: 0;
 			}
 

@@ -2,25 +2,27 @@
 PAGE CONTAINER - FOR ALL PAGES FROM ADMIN
 --------------------------------------------------------------------------------------------------------------------------------------*/
 .page-container {
-    margin-bottom: 116px;
-    @include xl{
-        margin-bottom: 121px;
-    }
-    @include sm{
-        margin-bottom: 103px;
-    }
+	padding-bottom: 116px;
+	@include xl {
+		padding-bottom: 121px;
+	}
+	@include sm {
+		padding-bottom: 103px;
+	}
 	h1,
 	h2 {
 		text-align: center;
-		padding-top: 31px;
-		margin-bottom: 64px;
-        @include xl{
-            padding-top: 61px;
-            margin-bottom: 61px;
-        }
-        @include sm{
-            padding-top: 85px;
-            margin-bottom: 103px;
-        }
-	}   
+		padding-top: 38px;
+		margin-bottom: 68px;
+		@include xl {
+			padding-top: 62px;
+			margin-bottom: 62px;
+		}
+		@include sm {
+			padding-top: 85px;
+			margin-bottom: 103px;
+		}
+	}
+
+    color: var(--color-white-gr);
 }
