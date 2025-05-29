@@ -8,6 +8,11 @@ BASE
 
 html {
 	scroll-behavior: smooth;
+	filter: brightness(45%); // blur(2px), sepia(100%), opacity(50%), grayscale(70%) ,brightness(60%)
+	transition: filter 0.5s ease-in;
+}
+.loaded {
+	filter: none;
 }
 
 body {

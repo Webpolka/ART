@@ -413,6 +413,10 @@ ACCORDION
 COOKIE WINDOW
 --------------------------------------------------------------------------------------------------------------------------------*/
 .cookies-window {
+	display: none;	
+	
+	&.active{display: block;}
+
 	position: fixed;
 	bottom: 63px;
 	right: 114px;

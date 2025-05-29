@@ -76,7 +76,7 @@ CART PAGE
 				padding-inline: 30px;
 				@include xl {
 					padding-inline: 25px;
-				}				
+				}
 
 				@include xl {
 					padding-inline: 23px;
@@ -146,13 +146,13 @@ CART PAGE
 					text-transform: uppercase;
 					color: var(--color-white-gr);
 					transition: all 0.3s ease-in-out;
+					&:hover {
+						color: var(--color-hover);
+					}
 
 					@include xl {
 						font-size: 10px;
-					}
-					// &:hover {
-					// 	color: var(--color-hover);
-					// }
+					}					
 				}
 			}
 		}

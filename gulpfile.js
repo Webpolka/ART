@@ -1,26 +1,27 @@
-import gulp from 'gulp';
-import browserSync from 'browser-sync';
-import { filePaths } from './gulp/config/paths.js';
+import gulp from "gulp";
+import browserSync from "browser-sync";
+import { filePaths } from "./gulp/config/paths.js";
 
 /**
  * Импорт задач
  */
-import { copy } from './gulp/tasks/copy.js';
-import { copyJS } from './gulp/tasks/copyJS.js';
-import { copyRootFiles } from './gulp/tasks/copy-root-files.js';
-import { reset } from './gulp/tasks/reset.js';
-import { html } from './gulp/tasks/html.js';
-import { server } from './gulp/tasks/server.js';
-import { scss } from './gulp/tasks/scss.js';
-import { javascript } from './gulp/tasks/javascript.js';
-import { images } from './gulp/tasks/images.js';
-import { svg } from './gulp/tasks/svg.js';
-import { otfToTtf, ttfToWoff, fontStyle } from './gulp/tasks/fonts.js';
-import { createSvgSprite } from './gulp/tasks/create-svg-sprite.js';
-import { zip } from './gulp/tasks/zip.js';
-import { ftpDeploy } from './gulp/tasks/ftp-deploy.js';
+import { copy } from "./gulp/tasks/copy.js";
+import { copyJS } from "./gulp/tasks/copyJS.js";
+import { css } from "./gulp/tasks/postcss.js";
+import { copyRootFiles } from "./gulp/tasks/copy-root-files.js";
+import { reset } from "./gulp/tasks/reset.js";
+import { html } from "./gulp/tasks/html.js";
+import { server } from "./gulp/tasks/server.js";
+import { scss } from "./gulp/tasks/scss.js";
+import { javascript } from "./gulp/tasks/javascript.js";
+import { images } from "./gulp/tasks/images.js";
+import { svg } from "./gulp/tasks/svg.js";
+import { otfToTtf, ttfToWoff, fontStyle } from "./gulp/tasks/fonts.js";
+import { createSvgSprite } from "./gulp/tasks/create-svg-sprite.js";
+import { zip } from "./gulp/tasks/zip.js";
+import { ftpDeploy } from "./gulp/tasks/ftp-deploy.js";
 
-const isBuild = process.argv.includes('--build');
+const isBuild = process.argv.includes("--build");
 const browserSyncInstance = browserSync.create();
 
 const handleServer = server.bind(null, browserSyncInstance);
@@ -34,13 +35,13 @@ const handleSvg = svg.bind(null, isBuild, browserSyncInstance);
  * Наблюдатель за изменениями в файлах
  */
 function watcher() {
-  gulp.watch(filePaths.watch.static, copy);
-  gulp.watch(filePaths.watch.staticJS, copyJS);
-  gulp.watch(filePaths.watch.html, handleHTML);
-  gulp.watch(filePaths.watch.scss, handleSCSS);
-  gulp.watch(filePaths.watch.js, handleJS);
-  gulp.watch(filePaths.watch.images, handleImages);
-  gulp.watch(filePaths.watch.svg, handleSvg);
+	gulp.watch(filePaths.watch.static, copy);
+	gulp.watch(filePaths.watch.staticJS, copyJS);
+	gulp.watch(filePaths.watch.html, handleHTML);
+	gulp.watch(filePaths.watch.scss, handleSCSS);
+	gulp.watch(filePaths.watch.js, handleJS);
+	gulp.watch(filePaths.watch.images, handleImages);
+	gulp.watch(filePaths.watch.svg, handleSvg);
 }
 
 /**
@@ -48,15 +49,16 @@ function watcher() {
  * */
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle);
 
+const postCss = gulp.series(css);
 /**
  * Параллельные задачи в режиме разработки
  * */
-const devTasks = gulp.parallel(copy, copyJS,  copyRootFiles, createSvgSprite, handleHTML, handleSCSS, handleJS, handleImages, handleSvg);
+const devTasks = gulp.parallel(copy, copyJS, copyRootFiles, createSvgSprite, handleHTML, handleSCSS, handleJS, handleImages, handleSvg);
 
 /**
  * Основные задачи
  * */
-const mainTasks = gulp.series(fonts, devTasks);
+const mainTasks = gulp.series(fonts, devTasks, postCss);
 
 /**
  * Построение сценариев выполнения задач
@@ -69,10 +71,9 @@ const deployFTP = gulp.series(reset, mainTasks, ftpDeploy);
 /**
  * Выполнение сценария по умолчанию
  * */
-gulp.task('default', dev);
-
+gulp.task("default", dev);
 
 /**
  * Экспорт сценариев
  * */
-export { dev, build, deployZIP, deployFTP, createSvgSprite };
+export { dev, build, deployZIP, deployFTP, createSvgSprite, postCss };

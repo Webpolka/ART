@@ -37,7 +37,7 @@
 	"devDependencies": {
 		"@archoleat/stylelint-config-extended-scss": "^1.6.9",
 		"@fancyapps/ui": "^5.0.36",
-		"autoprefixer": "^10.4.14",
+		"autoprefixer": "^10.4.21",
 		"browser-sync": "^2.27.7",
 		"chalk": "^5.2.0",
 		"del": "^6.0.0",
@@ -72,6 +72,7 @@
 		"gulp-webpcss": "^1.1.1",
 		"gulp-zip": "^5.1.0",
 		"js-hoverintent": "^1.0.5",
+		"postcss": "^8.5.4",
 		"postcss-preset-env": "^8.5.0",
 		"postcss-sort-media-queries": "^5.2.0",
 		"prettier": "2.8.8",
